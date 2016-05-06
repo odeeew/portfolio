@@ -254,7 +254,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     }
     .skill {width: 100px}
     .skill p {text-align: center;margin: 25px 0 -35px 0}
-    .loader {width: 100px;height: 100px;}
+    .loader {width: 100%;height: 100%;}
 
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
