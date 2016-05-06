@@ -107,6 +107,10 @@ $(window).scroll(function () {
                 fontColor:'rgba(86, 160, 155, 1)'
             }).draw();
             $('#rwd').parent('div').css('color','rgba(86, 160, 155, 1)');
+
+            if (parseInt($(window).width()) < 768){
+                $('.skill').css({'width':'50%'});
+            }
         }
     }
 });
