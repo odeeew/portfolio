@@ -252,7 +252,9 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     .cntl-state:nth-child(2n+1) .cntl-triangle, .cntl-state:nth-child(2n+2) .cntl-triangle {
         display: none;
     }
-
+    .skill {width: 40%}
+    .skill p {text-align: center;margin: 25px 0 -35px 0}
+    .loader {width: 40%;height: auto;}
 
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
