@@ -121,8 +121,6 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     justify-content:center;/*左右置中*/
     flex-wrap: wrap;
 }
-
-
 #coverContent #avatar {
     background: url("../img/avatar.jpg");
     background-position: center;
