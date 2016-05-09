@@ -5,7 +5,7 @@ $(document).ready(function(){
 $('#menu span').click(function () {
     var target = $(this).attr('id').split('menu',2)[1];
     $('html body').animate({
-       scrollTop:parent.$('#' + target).offset().top
+       scrollTop:(parseInt(parent.$('#' + target).offset().top) - 54) + 'px'
     },1000);
 });
 
@@ -15,7 +15,15 @@ $(window).scroll(function () {
         viewportHeight = parseInt($(window).height()),
         skillPosition = Math.round(parseInt($('#skillContainer').offset().top));
 
-    // if ()
+     if (scrollHeight >= (viewportHeight - 54)){
+         if ($('#coverPlaceholder').length == 0){
+             $('#container').prepend('<div id="coverPlaceholder" style="height: 100vh"></div>');
+         }
+         $('#cover').css({'position':'fixed','top':-(viewportHeight-54) + 'px','z-index':'999'});
+     } else {
+         $('#coverPlaceholder').remove();
+         $('#cover').css({'position':'relative','top':'0'});
+     }
 
     if ((scrollHeight + viewportHeight) - skillPosition > 0) {
         $('.skill').fadeIn(500);
