@@ -19,10 +19,10 @@ $(window).scroll(function () {
          if ($('#coverPlaceholder').length == 0){
              $('#container').prepend('<div id="coverPlaceholder" style="height: 100vh"></div>');
          }
-         $('#cover').css({'position':'fixed','top':-(viewportHeight-54) + 'px','z-index':'999'});
+         $('#cover').css({'position':'fixed','top':-(viewportHeight-54) + 'px','z-index':'999','opacity':'0.9'});
      } else {
          $('#coverPlaceholder').remove();
-         $('#cover').css({'position':'relative','top':'0'});
+         $('#cover').css({'position':'relative','top':'0','opacity':'1'});
      }
 
     if ((scrollHeight + viewportHeight) - skillPosition > 0) {
