@@ -1,14 +1,22 @@
 $(document).ready(function(){
 
+});
 
-
+$('#menu span').click(function () {
+    var target = $(this).attr('id').split('menu',2)[1];
+    $('html body').animate({
+       scrollTop:parent.$('#' + target).offset().top
+    },1000);
 });
 
 $(window).scroll(function () {
 
-    var scrollHeight =  parseInt($('body').scrollTop()),
+    var scrollHeight =  parseInt($('html body').scrollTop()),
         viewportHeight = parseInt($(window).height()),
         skillPosition = Math.round(parseInt($('#skillContainer').offset().top));
+
+    // if ()
+
     if ((scrollHeight + viewportHeight) - skillPosition > 0) {
         $('.skill').fadeIn(500);
         if ($('.skill').css('opacity') == 0){
