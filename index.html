@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="lib/cntl.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/card.css" />
+  	<link rel="stylesheet" type="text/css" href="css/pattern.css" />
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -22,15 +24,15 @@
     <div id="cover">
         <div id="coverContent">
             <div id="avatar"></div>
-            <div id="menu"><span id="menuAbout">About</span><span id="menuSkills">Skills</span><span id="menuExperiences">Experiences</span><span id="menuWorks ">Works</span></div>
+            <div id="menu"><span id="menuAbout">About</span><span id="menuSkills">Skills</span><span id="menuExperiences">Experiences</span><span id="menuWorks">Works</span></div>
         </div>
     </div>
     <div id="main">
         <div class="section" id="About">
             <div class="sectionContent">
                 <h1>About</h1>
-                <p>Gary Wang，由 25% A 型處女座注重細節，25% 夏洛克式邏輯思維，25% 資訊不足恐慌症和 25% 與死線搏鬥構成。</p>
-                <p>設計對我來說，不只是解決問題的方法，更是一種溝通語言，透過設計，我能和使用者溝通，和企業溝通，和 RD 溝通。</p>
+                <p>Gary Wang，<span id="jobDes">UI 設計師</span>。熱愛學習新事物，同時也追求產品完善度與市場需求的平衡。熟悉模組化設計方法，縮短開發時程並提昇使用者體驗。擅長扮演介於設計師與工程師之間的角色。</p>
+                <p>設計對我來說，不只是解決問題的方法，更是一種溝通語言，我不僅能透過設計和使用者溝通，更重要的是透過設計和工作夥伴溝通，讓產品的製作過程更加流暢。</p>
                 <p>我認為好的設計應該具有以下的特點：</p>
                 <ul>
                     <li>能自我解釋</li>
@@ -41,13 +43,13 @@
                     <li>愉悅用戶</li>
                     <li>沒有存在感</li>
                 </ul>
-                <p>我的設計流程會從需求分析開始，接著產出 wireframe，用以蒐集內部 feedback，接著根據 feedback 產出 mockup，用以蒐集外部 feedback，再根據 feedback 產出出 prototype，並進行需求的確認，最後產出 guideline，交由實做單位作出產品。</p>
+                <p>我的設計流程會從需求分析開始，根據需求整理出 UI flow 與 wireframe，用以蒐集內部 feedback，接著根據 feedback 產出 mockup，用以蒐集外部 feedback，再根據 feedback 產出 prototype，並進行需求與實做的確認，最後產出 guideline，交由實做單位作出產品。</p>
             </div>
         </div>
         <div class="section" id="Skills">
             <div class="sectionContent">
                 <h1>Skills</h1>
-                <p>本身對學習有濃厚興趣，只要評估過後覺得實用軟體或技術，都會花時間去嘗試與學習。在軟體操作方面，由於從事介面設計工作，對操作介面自然有高度的敏銳度與學習能力，框架部分則是挑泛用性最廣的來使用。另外，目前正在學習 ReactJs 中。</p>
+                <p>本身對學習有濃厚興趣，只要評估過後覺得實用軟體或技術，都會花時間去嘗試與學習。在應用軟體部份，對操作介面有高度的敏銳度與學習能力，框架部分則是挑泛用性最廣的來使用。另外，目前正在學習 ReactJs 中。</p>
                 <p>以下列出對常用軟體使用及技術掌握的程度。</p>
                 <div id="skillContainer">
                     <div class="skill productDesigner uiDesigner webDesigner"><p>Photoshop</p>
@@ -113,8 +115,8 @@
                             <div class="cntl-content">
                                 <h4>台北市教會網路資訊中心</h4>
                                 <h5>網頁設計師</h5>
-                                <p>負責 Joomla 客製化版型設計、網路應用程式介面設計、Android/iOS App 介面設計，以及 Facebook App 介面設計。</p>
-                                <p>並參與 Facebook 社群經營，藉由各種優質內容與多元的曝光管道，當時所經營的粉絲專頁<a href="https://www.facebook.com/luke54.org" target="_blank">「水深之處」</a>迅速成為華語基督教界數一數二的網路社群品牌。</p>
+                                <p>負責 Joomla 客製化版型設計、網路應用程式介面設計、Android/iOS App 介面設計，以及 Facebook App 介面設計。過程中常透過 A/B Testing 優化 Call to Action 的轉換率。</p>
+                                <p>另外也參與了 Facebook 粉絲專頁經營，藉由各種優質內容與多元的曝光管道，當時所經營的粉絲專頁<a href="https://www.facebook.com/luke54.org" target="_blank">「水深之處」</a>迅速成為華語基督教界數一數二的網路社群品牌。</p>
                             </div>
                             <span class="cntl-triangle"></span>
                             <div class="cntl-icon cntl-center">'10</div>
@@ -170,18 +172,91 @@
         <div class="section" id="Works">
             <div class="sectionContent">
                 <h1>Works</h1>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="content">
+            			<!-- trianglify pattern container -->
+            			<div class="pattern pattern--hidden"></div>
+            			<!-- cards -->
+            				<div class="card">
+            					<div class="card__container card__container--closed">
+            						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+            							<defs>
+            								<clipPath id="clipPath1">
+            									<!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+            									<circle class="clip" cx="960" cy="250" r="992"></circle>
+            								</clipPath>
+            							</defs>
+            							<image clip-path="url(#clipPath1)" width="1920" height="500" xlink:href="img/a.jpg"></image>
+            						</svg>
+            						<div class="card__content">
+            							<i class="card__btn-close fa fa-times"></i>
+            							<div class="card__caption">
+            								<h2 class="card__title">Tristan and Isolde</h2>
+            								<p class="card__subtitle">A modern day love story</p>
+            							</div>
+            							<div class="card__copy">
+            								<div class="meta">
+            									<img class="meta__avatar" src="img/authors/1.png" alt="author01" />
+            									<span class="meta__author">Gerry Sutherland</span>
+            									<span class="meta__date">06/19/2015</span>
+            								</div>
+            								<p>Business model canvas bootstrapping deployment startup. In A/B testing pivot niche market alpha conversion startup down monetization partnership business-to-consumer success for investor mass market business-to-business.</p>
+            								<p>Release creative social proof influencer iPad crowdsource gamification learning curve network effects monetization. Gamification business plan mass market www.discoverartisans.com direct mailing ecosystem seed round sales long tail vesting period.</p>
+            								<p>Product management ramen bootstrapping seed round venture holy grail technology backing partner network entrepreneur beta marketing value proposition. Android stealth conversion scrum project network effects. Creative alpha long tail conversion stealth growth hacking iteration investor A/B testing prototype customer. Startup www.discoverartisans.com direct mailing launch party partnership market ramen metrics focus value proposition.</p>
+            								<p>Stock infrastructure seed round sales paradigm shift technology user experience focus gamification. Partnership metrics business plan stealth business-to-business. Deployment graphical user interface monetization. Twitter incubator scrum project entrepreneur branding burn rate ramen backing paradigm shift virality crowdsource.</p>
+            								<p>Social proof MVP ecosystem. Ramen launch party pitch deployment stealth. Vesting period MVP equity. Focus creative partnership founders iteration agile development infographic.</p>
+            								<p>Low hanging fruit burn rate innovator user experience niche market A/B testing creative launch party product management release. Www.discoverartisans.com influencer business model canvas user experience gamification paradigm shift startup research &amp; development iPad agile development. Strategy incubator infographic success marketing buzz A/B testing responsive web design. Traction research &amp; development pitch seed money venture niche market accelerator network effects.</p>
+            							</div>
+            						</div>
+            					</div>
+            				</div>
+            				<div class="card">
+            					<div class="card__container card__container--closed">
+            						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+            							<defs>
+            								<clipPath id="clipPath2">
+            									<!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+            									<circle class="clip" cx="960" cy="250" r="992"></circle>
+            								</clipPath>
+            							</defs>
+            							<image clip-path="url(#clipPath2)" width="1920" height="500" xlink:href="img/b.jpg"></image>
+            						</svg>
+            						<div class="card__content">
+            							<i class="card__btn-close fa fa-times"></i>
+            							<div class="card__caption">
+            								<h2 class="card__title">About Helen</h2>
+            								<p class="card__subtitle">A story about a woman</p>
+            							</div>
+            							<div class="card__copy">
+            								<div class="meta">
+            									<img class="meta__avatar" src="img/authors/2.png" alt="author02" />
+            									<span class="meta__author">Frank Posterius</span>
+            									<span class="meta__date">06/16/2015</span>
+            								</div>
+            								<p>Business model canvas bootstrapping deployment startup. In A/B testing pivot niche market alpha conversion startup down monetization partnership business-to-consumer success for investor mass market business-to-business.</p>
+            								<p>Release creative social proof influencer iPad crowdsource gamification learning curve network effects monetization. Gamification business plan mass market www.discoverartisans.com direct mailing ecosystem seed round sales long tail vesting period.</p>
+            								<p>Product management ramen bootstrapping seed round venture holy grail technology backing partner network entrepreneur beta marketing value proposition. Android stealth conversion scrum project network effects. Creative alpha long tail conversion stealth growth hacking iteration investor A/B testing prototype customer. Startup www.discoverartisans.com direct mailing launch party partnership market ramen metrics focus value proposition.</p>
+            								<p>Stock infrastructure seed round sales paradigm shift technology user experience focus gamification. Partnership metrics business plan stealth business-to-business. Deployment graphical user interface monetization. Twitter incubator scrum project entrepreneur branding burn rate ramen backing paradigm shift virality crowdsource.</p>
+            								<p>Social proof MVP ecosystem. Ramen launch party pitch deployment stealth. Vesting period MVP equity. Focus creative partnership founders iteration agile development infographic.</p>
+            								<p>Low hanging fruit burn rate innovator user experience niche market A/B testing creative launch party product management release. Www.discoverartisans.com influencer business model canvas user experience gamification paradigm shift startup research &amp; development iPad agile development. Strategy incubator infographic success marketing buzz A/B testing responsive web design. Traction research &amp; development pitch seed money venture niche market accelerator network effects.</p>
+            							</div>
+            						</div>
+            					</div>
+            				</div>
+                </div>
+              </div>
+          </div>
 
-<!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>-->
-<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="js/jquery.classyloader.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="js/vendor/jquery.classyloader.min.js"></script>
 <script src="lib/jquery.cntl.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/vendor/trianglify.min.js"></script>
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/ScrollToPlugin.min.js"></script>
+<script src="js/vendor/cash.min.js"></script>
+<script src="js/Card-circle.js"></script>
+<script src="js/cardEffect.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script >
@@ -201,8 +276,9 @@
     ga('send', 'pageview');
 </script>
 <script>
-    $(document).ready(function (e) {
-        $('.cntl').cntl();
+  jQuery.noConflict();
+    jQuery(document).ready(function (e) {
+        jQuery('.cntl').cntl();
     });
 </script>
 </body>
