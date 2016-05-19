@@ -156,7 +156,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 .section:nth-child(even) {background: #fdfdfd;}
 .sectionContent {max-width: 768px;margin: 0 auto}
 #skillContainer {width:100%;display: flex;flex-wrap: wrap;justify-content: space-around;max-width: 1200px;}
-.skill {width: 200px;display: none}
+.skill {width: 200px;opacity: 0}
 .skill p {text-align: center;margin: 50px 0 -70px 0}
 .loader {width: 200px;height: 200px;}
 .cntl-triangle {

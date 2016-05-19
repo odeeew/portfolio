@@ -27,14 +27,14 @@ jQuery(window).scroll(function () {
      }
 
     if ((scrollHeight + viewportHeight) - skillPosition > 0) {
-        jQuery('.skill').fadeIn(500);
         if (jQuery('.skill').css('opacity') == 0){
+            jQuery('.skill').fadeTo('fast',1);
             jQuery('#photoshop').ClassyLoader({
                 percentage:90,
                 roundedLine:true,
                 lineColor:'rgba(0, 160, 204, 1)',
                 fontColor:'rgba(0, 160, 204, 1)'
-            }).draw()
+            }).draw();
             jQuery('#photoshop').parent('div').css('color','rgba(0, 160, 204, 1)');
 
             jQuery('#illustrator').ClassyLoader({
