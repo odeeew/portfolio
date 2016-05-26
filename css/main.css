@@ -178,6 +178,8 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 }
 .cntl-state p {text-align: justify;text-justify: inter-ideograph;}
 
+.meta__avatar {width: 40px}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
