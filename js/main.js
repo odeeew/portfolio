@@ -14,13 +14,14 @@ jQuery(window).scroll(function () {
 
     var scrollHeight =  parseInt(jQuery('html body').scrollTop()),
         viewportHeight = parseInt(jQuery(window).height()),
-        skillPosition = Math.round(parseInt(jQuery('#skillContainer').offset().top));
+        skillPosition = Math.round(parseInt(jQuery('#skillContainer').offset().top)),
+        coverHeight = jQuery('#cover').height();
 
      if (scrollHeight >= (viewportHeight - 54)){
          if (jQuery('#coverPlaceholder').length == 0){
              jQuery('#container').prepend('<div id="coverPlaceholder" style="height: 100vh"></div>');
          }
-         jQuery('#cover').css({'position':'fixed','top':-(viewportHeight-54) + 'px','z-index':'999','opacity':'0.9'});
+         jQuery('#cover').css({'position':'fixed','top':-(coverHeight+30-54) + 'px','z-index':'999','opacity':'0.9'});
      } else {
          jQuery('#coverPlaceholder').remove();
          jQuery('#cover').css({'position':'relative','top':'0','opacity':'1'});

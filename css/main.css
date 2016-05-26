@@ -117,7 +117,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     color: #fff;
     margin: 0 auto;
     display: flex;
-    align-items:center;/*垂直至中*/
+    align-items:center;/*垂直置中*/
     justify-content:center;/*左右置中*/
     flex-wrap: wrap;
 }
