@@ -144,8 +144,6 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     padding: 0 10px;
     cursor: pointer;
 }
-
-
 /*主要內容*/
 #main {
     width: 100%;
@@ -159,6 +157,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 .skill {width: 200px;opacity: 0}
 .skill p {text-align: center;margin: 50px 0 -70px 0}
 .loader {width: 200px;height: 200px;}
+/*經歷*/
 .cntl-triangle {
     display: inline-block;
     width: 0;
@@ -166,7 +165,6 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     border-style: solid;
     margin: 10px 0 0 0;
 }
-
 .cntl-state:nth-child(odd) .cntl-triangle {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent rgba(238,238,238,.60);
@@ -177,7 +175,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     float: right;
 }
 .cntl-state p {text-align: justify;text-justify: inter-ideograph;}
-
+/*作品*/
 .meta__avatar {width: 40px}
 
 /* ==========================================================================
