@@ -1,6 +1,18 @@
 jQuery.noConflict();
 jQuery(document).ready(function(){
-
+    jQuery('.card__image').click(function () {
+        jQuery('.pattern').fadeIn(500).css({
+            'background': 'rgba(255,255,255,0.8)',
+            'display': 'block',
+            'opacity': '1'
+        });
+    });
+    jQuery('.card__btn-close').click(function () {
+        function hidePattern() {
+            jQuery('.pattern').fadeTo('slow',0);
+        }
+        setTimeout(hidePattern,2000);
+    });
 });
 
 jQuery('#menu span').click(function () {
