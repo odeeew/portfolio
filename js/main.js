@@ -4,7 +4,8 @@ jQuery(document).ready(function(){
         jQuery('.pattern').fadeIn(500).css({
             'background': 'rgba(255,255,255,0.8)',
             'display': 'block',
-            'opacity': '1'
+            'opacity': '1',
+            'z-index': '1'
         });
     });
     jQuery('.card__btn-close').click(function () {
