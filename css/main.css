@@ -107,7 +107,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
 }
 
 #coverContent {
@@ -139,9 +139,11 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     width: 100%;
 }
 #coverContent #menu span {
+    display: inline-block;
     text-align: center;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding-bottom:5px;
+    margin: 0 10px;
     cursor: pointer;
 }
 /*主要內容*/
@@ -174,7 +176,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     border-color: transparent rgba(238,238,238,.60) transparent transparent;
     float: right;
 }
-.cntl-state p {text-align: justify;text-justify: inter-ideograph;}
+.cntl-state p {text-align: justify;text-justify: inter-word;}
 /*作品*/
 .meta__avatar {width: 40px}
 .card__container {z-index: 999}
@@ -264,9 +266,17 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     .cntl-state:nth-child(2n+1) .cntl-triangle, .cntl-state:nth-child(2n+2) .cntl-triangle {
         display: none;
     }
-.skill p {text-align: center;margin: 25% 0 -37% 0;}
-    .loader {width: 100%;height: 100%;}
 
+    .skill p {
+        text-align: center;
+        margin: 25% 0 -37% 0;
+    }
+
+    .loader {
+        width: 100%;
+        height: 100%;
+    }
+}
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 1.25dppx),
