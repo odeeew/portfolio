@@ -9,11 +9,15 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);*/
 *{box-sizing: border-box;}
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
 }
 
 /*
@@ -149,6 +153,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
     padding-bottom:5px;
     /*margin: 0 9px;*/
     cursor: pointer;
+    font-family: Quicksand;
 }
 /*主要內容*/
 #main {
@@ -159,6 +164,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 .section {padding: 1px 15px 15px 15px;width: 100%;}
 .section:nth-child(even) {background: #fdfdfd;}
 .sectionContent {max-width: 768px;margin: 0 auto}
+.sectionContent h1 {font-family: Quicksand}
 /*技能*/
 #skillContainer {
     width:100%;
@@ -192,6 +198,7 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 #Works .content {display:flex;flex-wrap: wrap;justify-content:center}
 .meta__avatar {width: 40px}
 .card__container {z-index: 999}
+.card__caption h2 {font-family: cwTeXYen}
 
 /* ==========================================================================
    Helper classes
