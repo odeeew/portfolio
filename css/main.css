@@ -98,7 +98,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dotted 1px #009ABB}
+a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 #container {
     margin: 0;
     padding: 0;
@@ -186,19 +186,23 @@ a {color:#009ABB;text-decoration: none;display: inline-block;border-bottom: dott
 }
 .cntl-state:nth-child(odd) .cntl-triangle {
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #E3F3F6;
+    border-color: transparent transparent transparent #fff;
 }
 .cntl-state:nth-child(even) .cntl-triangle {
     border-width: 10px 10px 10px 0;
-    border-color: transparent #E3F3F6 transparent transparent;
+    border-color: transparent #fff transparent transparent;
     float: right;
 }
-.cntl-state p {text-align: justify;text-justify: inter-word;}
+.cntl-state p {text-align: justify;word-break: break-all}
 /*作品*/
 #Works .content {display:flex;flex-wrap: wrap;justify-content:center}
 .meta__avatar {width: 40px}
 .card__container {z-index: 999}
+.card__container--closed {border-radius: 8px}
 .card__caption h2 {font-family: cwTeXYen}
+.card__content p {font-size:1.2em;text-align: justify;word-break: break-all}
+p.card__subtitle {font-size: 0.95em}
+.card__content li {font-size: 1.2em;margin: 7px 0}
 
 /* ==========================================================================
    Helper classes
