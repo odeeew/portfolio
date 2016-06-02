@@ -111,7 +111,7 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding: 15px 0 5px 0;
+    padding: 15px 10px 5px 10px;
 }
 
 #coverContent {
@@ -144,7 +144,7 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
     max-width: 400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #coverContent #menu span {
     display: block;
@@ -175,6 +175,7 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 }
 .skill {width: 200px;height: 200px;overflow: hidden;display: none}
 .skill p {text-align: center;margin: 50px 0 -70px 0}
+.skillPlaceholder {width:200px;height: 200px}
 .loader {width: 100%;height: 100%;}
 /*經歷*/
 .cntl-triangle {
@@ -183,16 +184,19 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
     height: 0;
     border-style: solid;
     margin: 10px 0 0 0;
+    opacity:0;
+    -webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-o-transition:all 500ms ease;-ms-transition:all 500ms ease;transition:all 500ms ease
 }
 .cntl-state:nth-child(odd) .cntl-triangle {
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #fff
 }
 .cntl-state:nth-child(even) .cntl-triangle {
     border-width: 10px 10px 10px 0;
     border-color: transparent #fff transparent transparent;
-    float: right;
+    float: right
 }
+.cntl-animate .cntl-triangle {opacity:1;-webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-o-transition:all 500ms ease;-ms-transition:all 500ms ease;transition:all 500ms ease}
 .cntl-state p {text-align: justify;word-break: break-all}
 /*作品*/
 #Works .content {display:flex;flex-wrap: wrap;justify-content:center}
@@ -297,7 +301,7 @@ p.card__subtitle {font-size: 0.95em}
 }
 @media only screen and (max-width: 320px) {
     #coverContent #menu span {
-        transform: scalex(0.85);
+        transform: scalex(0.83);
     }
 }
 @media print,
