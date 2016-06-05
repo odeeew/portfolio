@@ -207,7 +207,8 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 .card__content p {font-size:1.2em;text-align: justify;word-break: break-all}
 p.card__subtitle {font-size: 0.95em}
 .card__content li {font-size: 1.2em;margin: 7px 0}
-
+/*聯絡表單*/
+#Contact {padding-bottom: 40px}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
