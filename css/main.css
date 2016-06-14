@@ -210,9 +210,9 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 .card__container {z-index: 999}
 .card__container--closed {border-radius: 8px;border-bottom:solid 3px #b3b3b3}
 .card__caption h2 {font-family: cwTeXYen,Quicksand}
-.card__content p {font-size:1.2em;text-align: justify;word-break: break-all}
+.card__content p {font-size:1em;text-align: justify;word-break: break-all}
 p.card__subtitle {font-size: 0.95em}
-.card__content li {font-size: 1.2em;margin: 7px 0}
+.card__content li {font-size: 1em;margin: 7px 0}
 .articleImg {width:100%}
 /*聯絡表單*/
 #Contact {padding-bottom: 40px}
