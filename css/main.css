@@ -168,6 +168,9 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 .section:nth-child(even) {background: #fdfdfd;}
 .sectionContent {max-width: 768px;margin: 0 auto}
 .sectionContent h1 {font-family: Quicksand}
+.center {text-align: center}
+/*關於*/
+#iframe_container {height: calc(768px * 0.727272727)}
 /*技能*/
 #skillContainer {
     width:100%;
@@ -202,14 +205,15 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 .cntl-animate .cntl-triangle {opacity:1;-webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-o-transition:all 500ms ease;-ms-transition:all 500ms ease;transition:all 500ms ease}
 .cntl-state p {text-align: justify;word-break: break-all}
 /*作品*/
-#Works .content {display:flex;flex-wrap: wrap;justify-content:center}
+#Works .content {display:flex;flex-wrap: wrap;justify-content:flex-start}
 .meta__avatar {width: 40px}
 .card__container {z-index: 999}
-.card__container--closed {border-radius: 8px}
-.card__caption h2 {font-family: cwTeXYen}
+.card__container--closed {border-radius: 8px;border-bottom:solid 3px #b3b3b3}
+.card__caption h2 {font-family: cwTeXYen,Quicksand}
 .card__content p {font-size:1.2em;text-align: justify;word-break: break-all}
 p.card__subtitle {font-size: 0.95em}
 .card__content li {font-size: 1.2em;margin: 7px 0}
+.articleImg {width:100%}
 /*聯絡表單*/
 #Contact {padding-bottom: 40px}
 /* ==========================================================================
@@ -297,6 +301,7 @@ p.card__subtitle {font-size: 0.95em}
     .cntl-state:nth-child(2n+1) .cntl-triangle, .cntl-state:nth-child(2n+2) .cntl-triangle {
         display: none;
     }
+    #iframe_container {height: calc((100vw - 30px) * 0.727272727)}
     /*.skill {width:50%}*/
     .skill p {
         text-align: center;
@@ -304,8 +309,8 @@ p.card__subtitle {font-size: 0.95em}
     }
 }
 @media only screen and (max-width: 320px) {
-    #coverContent #menu span {
-        transform: scalex(0.83);
+    #cover #menu span {
+        transform: scaleX(0.83);
     }
 }
 @media print,
