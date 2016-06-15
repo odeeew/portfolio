@@ -5,8 +5,8 @@
 	/*float: left;*/
 	width: 46%;
 	height: 0;
-	margin: 2%;
-	padding-bottom: 32.2%;
+	margin: 2vh 2%;
+	padding-bottom: 32.2vh;
 	z-index: 1;
 }
 
@@ -163,7 +163,7 @@
 @media only screen and (max-width: 980px) {
 	.card {
 		width: 46%;
-		padding-bottom: 32.2%;
+		padding-bottom: 32.2vh;
 	}
 	.card__image {
 		max-height: 360px;
