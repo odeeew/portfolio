@@ -310,7 +310,7 @@ p.card__subtitle {font-size: 0.95em}
     /*.skill {width:50%}*/
     .skill p {
         text-align: center;
-        margin: 25% 0 -37% 0;
+        margin: 32% 0 -60% 0;
     }
 }
 @media only screen and (max-width: 320px) {
