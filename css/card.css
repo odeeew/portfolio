@@ -5,8 +5,9 @@
 	/*float: left;*/
 	width: 46%;
 	height: 0;
-	margin: 2vh 2%;
-	padding-bottom: 32.2vh;
+	margin: 1.5vh 2%;/*2%*/
+	/*padding-bottom: 32.2%;*/
+	padding-bottom:calc((768px - 6%) / 2 / 29 * 20);
 	z-index: 1;
 }
 
@@ -162,8 +163,8 @@
 
 @media only screen and (max-width: 980px) {
 	.card {
-		width: 46%;
-		padding-bottom: 32.2vh;
+		/*width: 46%;*/
+		/*padding-bottom: 32.2%;*/
 	}
 	.card__image {
 		max-height: 360px;
@@ -175,10 +176,18 @@
 	}
 }
 
+@media only screen and (max-width: 797px){
+	.card {
+		/*width:46%;*/
+		/*margin:1.6vw;*/
+		padding-bottom: 32.2vw;/*32%*/
+	}
+}
+
 @media only screen and (max-width: 580px) {
 	.card {
 		width: 96%;
-		padding-bottom: 67.2%;
+		padding-bottom: calc(100vw / 29 * 20 - 35px);
 	}
 }
 
