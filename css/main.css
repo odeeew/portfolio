@@ -139,7 +139,8 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 }
 #coverContent #welcome {margin-top: 20px;text-align: center}
 #coverContent #welcome h1 {font-family: Quicksand}
-
+#titleContainer {height: 22px;overflow: hidden}
+#titleContainer p {position: relative;margin: 0}
 #cover #menu {
     align-self: flex-end;
     /*text-align: center;*/
