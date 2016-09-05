@@ -221,113 +221,45 @@
             <div class="sectionContent">
                 <h1>Works</h1>
                 <div class="content">
-            			<!-- trianglify pattern container -->
-            			<div class="pattern pattern--hidden"></div>
-            			<!-- cards -->
-            				<div class="card">
-            					<div class="card__container card__container--closed">
-            						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
-            							<defs>
-            								<clipPath id="clipPath1">
-            									<!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
-            									<circle class="clip" cx="960" cy="250" r="992"></circle>
-            								</clipPath>
-            							</defs>
-            							<image clip-path="url(#clipPath1)" width="1920" height="500" xlink:href="img/work1cover.jpg"></image>
-            						</svg>
-            						<div class="card__content">
-            							<i class="card__btn-close fa fa-times">X</i>
-            							<div class="card__caption">
-            								<h2 class="card__title">極簡風蕃茄鐘網頁應用程式</h2>
-            								<p class="card__subtitle">將介面去蕪存菁的過程</p>
-            							</div>
-            							<div class="card__copy">
-            								<div class="meta">
-            									<img class="meta__avatar" src="img/avatar.jpg" alt="author01" />
-            									<span class="meta__author">Gary Wang</span>
-            									<span class="meta__date">05/25/2016</span>
-            								</div>
-            								<p>為了要提昇自己的工作效率，我開始使用蕃茄鐘工作法，但是關鍵的計時工具始終沒有找到順手的，所以就想自己動手作一個。</p>
-            								<p>由於大多數的蕃茄鐘計時工具，普遍都有計時以外的功能，雖然立意良好，但是對我來說，待辦事項已經有習慣的工具，我只需要計時，多餘的功能反而造成操作上的障礙，或者成為一種分心的理由，無法讓我聚焦在現在的任務。另外，個人習慣在多螢幕環境下工作，因此，會有多出的螢幕空間可以運用。</p>
-                                            <p>在簡單分析過自己的需求之後，決定我的蕃茄鐘計時器，要達到以下的目標：</p>
-                                            <ul>
-                                                <li>介面要盡可能簡化，除去造成干擾的因素</li>
-                                                <li>設定時間的方法要盡可能簡單，最好可以用按鍵完成</li>
-                                            </ul>
-                                            <p>為了達到介面簡化的目的，我開始思考各個功能存在的必要性，最後只留下顯示剩餘時間的介面，並且為了不要讓自己不時的去注意還有多少時間，而無法專心，我特地將時間的顯示放在最不容易注意到的畫面左下角。</p>
-                                            <p>至於設定時間的方法，無論那一種方案，都需要額外的操作介面，而如果想要有清爽簡單的畫面，則需要在設定完成之後隱藏起來，這樣又會讓操作多出額外的步驟，最後使用既有的網址列，來作時間的設定，既可以達到無介面，也保留彈性。只要重新整理網頁，就可以再一次進行計時，搭配快捷鍵使用，非常的容易操作。而隨機的背景圖片，讓每一次計時循環，有一個小小的驚喜，也可作為一個心理上的獎勵，符合蕃茄鐘工作法的原則。</p>
-                                            <p>時間已到的通知，採用讓整個畫面閃爍的方式，不需發出聲音，也可以達到通知效果。最近發現 Android 系統支援 Vibrate API，於是就實做出來，讓沒有多螢幕工作環境時，可以透過手機的振動達到提醒的效果。</p>
-                                            <p>GitHub 專案網址：<a href="https://github.com/odeeew/tomato" target="_blank">https://github.com/odeeew/tomato</a></p>
-                                            <p>網站網址：<a target="_blank" href="http://odeeew.github.io/tomato/?25&5">http://odeeew.github.io/tomato/?25&5</a></p>
-                                            <p>設定方式：網址結尾的參數，第一個數字，代表專注的時間，單位是分鐘，第二個數字，代表休息的時間，單位也是分鐘。可以隨自己的喜好，從網址調整計時的時間。</p>
-            							</div>
-            						</div>
-            					</div>
-            				</div>
-            				<div class="card">
-            					<div class="card__container card__container--closed">
-            						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
-            							<defs>
-            								<clipPath id="clipPath2">
-            									<!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
-            									<circle class="clip" cx="960" cy="250" r="992"></circle>
-            								</clipPath>
-            							</defs>
-            							<image clip-path="url(#clipPath2)" width="1920" height="500" xlink:href="img/work2cover.jpg"></image>
-            						</svg>
-            						<div class="card__content">
-            							<i class="card__btn-close fa fa-times">X</i>
-            							<div class="card__caption">
-            								<h2 class="card__title">機械表造型時間顯示網頁</h2>
-            								<p class="card__subtitle">經典復刻</p>
-            							</div>
-            							<div class="card__copy">
-            								<div class="meta">
-            									<img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
-            									<span class="meta__author">Gary Wang</span>
-            									<span class="meta__date">05/30/2016</span>
-            								</div>
-            								<p>為了讓負責廣告業務的同事去提案，所討論出 Oris 可能會感興趣的互動式廣告。</p>
-            								<p>由於對方是瑞士百年機械表大廠，設計精美的指針表盤即是他們的特色，因此，希望藉由機械表介面的對時功能，來達到品牌印象的強化，同時也可以增加產品的曝光。</p>
-                                            <p>有別於製作一般數字時鐘，只要用 javascript 取得時間，再設計其呈現的樣式即可，要呈現傳統的時鐘介面，需要將時間換算成指針的角度，此外，最大的挑戰在於，在不同螢幕尺寸的設備上，需要讓時針、分針、秒針對齊，不會跑版才行。</p>
-                                            <p>另外，為了達到產品曝光的效果，還製作了產品規格介紹，並透過按鈕來開啟，以避免干擾產品的呈現效果。</p>
-                                            <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/Projects/OrisWatch/">http://garytest.pancakeapps.com/Projects/OrisWatch/</a></p>
-            							</div>
-            						</div>
-            					</div>
-            				</div>
+                    <!-- trianglify pattern container -->
+                    <div class="pattern pattern--hidden"></div>
+                    <!-- cards -->
                     <div class="card">
                         <div class="card__container card__container--closed">
                             <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
                                 <defs>
-                                    <clipPath id="clipPath3">
+                                    <clipPath id="clipPath1">
                                         <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
                                         <circle class="clip" cx="960" cy="250" r="992"></circle>
                                     </clipPath>
                                 </defs>
-                                <image clip-path="url(#clipPath3)" width="1920" height="500" xlink:href="img/work3cover.png"></image>
+                                <image clip-path="url(#clipPath1)" width="1920" height="500" xlink:href="img/work1cover.jpg"></image>
                             </svg>
                             <div class="card__content">
                                 <i class="card__btn-close fa fa-times">X</i>
                                 <div class="card__caption">
-                                    <h2 class="card__title">XONE App</h2>
-                                    <p class="card__subtitle">豐富你的行動生活</p>
+                                    <h2 class="card__title">極簡風蕃茄鐘網頁應用程式</h2>
+                                    <p class="card__subtitle">將介面去蕪存菁的過程</p>
                                 </div>
                                 <div class="card__copy">
                                     <div class="meta">
-                                        <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
+                                        <img class="meta__avatar" src="img/avatar.jpg" alt="author01" />
                                         <span class="meta__author">Gary Wang</span>
-                                        <span class="meta__date">06/9/2016</span>
+                                        <span class="meta__date">05/25/2016</span>
                                     </div>
-                                    <p>目前公司的主要產品，我負責規劃介面的操作流程、資訊架構與訂製視覺設計規範。</p>
-                                    <p>我是公司第一位設計師，因此從視覺設計、切圖到與需求端的溝通，與工程師的溝通，甚至多國語系的字串表等都由我負責。</p>
-                                    <img class="articleImg" src="img/flow.png" />
-                                    <p>為了使溝通更加流暢，並且為了利於後續新進人員快速進入狀況，我陸續開始建立一些標準作業流程，以及設計規範。</p>
-                                    <img class="articleImg" src="img/flow2.png" />
-                                    <p>後續其他同事進來後，我們就一起將規範文件建立的更加完善。</p>
-                                    <img class="articleImg" src="img/guideline.png" />
-                                    <p>App 下載：</p>
-                                    <p><a href="https://play.google.com/store/apps/details?id=net.connexionone.android.xone" target="_blank">Android 版</a>、<a href="https://itunes.apple.com/app/xone-media/id981354458" target="_blank">iOS 版</a></p>
+                                    <p>為了要提昇自己的工作效率，我開始使用蕃茄鐘工作法，但是關鍵的計時工具始終沒有找到順手的，所以就想自己動手作一個。</p>
+                                    <p>由於大多數的蕃茄鐘計時工具，普遍都有計時以外的功能，雖然立意良好，但是對我來說，待辦事項已經有習慣的工具，我只需要計時，多餘的功能反而造成操作上的障礙，或者成為一種分心的理由，無法讓我聚焦在現在的任務。另外，個人習慣在多螢幕環境下工作，因此，會有多出的螢幕空間可以運用。</p>
+                                    <p>在簡單分析過自己的需求之後，決定我的蕃茄鐘計時器，要達到以下的目標：</p>
+                                    <ul>
+                                        <li>介面要盡可能簡化，除去造成干擾的因素</li>
+                                        <li>設定時間的方法要盡可能簡單，最好可以用按鍵完成</li>
+                                    </ul>
+                                    <p>為了達到介面簡化的目的，我開始思考各個功能存在的必要性，最後只留下顯示剩餘時間的介面，並且為了不要讓自己不時的去注意還有多少時間，而無法專心，我特地將時間的顯示放在最不容易注意到的畫面左下角。</p>
+                                    <p>至於設定時間的方法，無論那一種方案，都需要額外的操作介面，而如果想要有清爽簡單的畫面，則需要在設定完成之後隱藏起來，這樣又會讓操作多出額外的步驟，最後使用既有的網址列，來作時間的設定，既可以達到無介面，也保留彈性。只要重新整理網頁，就可以再一次進行計時，搭配快捷鍵使用，非常的容易操作。而隨機的背景圖片，讓每一次計時循環，有一個小小的驚喜，也可作為一個心理上的獎勵，符合蕃茄鐘工作法的原則。</p>
+                                    <p>時間已到的通知，採用讓整個畫面閃爍的方式，不需發出聲音，也可以達到通知效果。最近發現 Android 系統支援 Vibrate API，於是就實做出來，讓沒有多螢幕工作環境時，可以透過手機的振動達到提醒的效果。</p>
+                                    <p>GitHub 專案網址：<a href="https://github.com/odeeew/tomato" target="_blank">https://github.com/odeeew/tomato</a></p>
+                                    <p>網站網址：<a target="_blank" href="http://odeeew.github.io/tomato/?25&5">http://odeeew.github.io/tomato/?25&5</a></p>
+                                    <p>設定方式：網址結尾的參數，第一個數字，代表專注的時間，單位是分鐘，第二個數字，代表休息的時間，單位也是分鐘。可以隨自己的喜好，從網址調整計時的時間。</p>
                                 </div>
                             </div>
                         </div>
@@ -336,29 +268,161 @@
                         <div class="card__container card__container--closed">
                             <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
                                 <defs>
-                                    <clipPath id="clipPath4">
+                                    <clipPath id="clipPath2">
                                         <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
                                         <circle class="clip" cx="960" cy="250" r="992"></circle>
                                     </clipPath>
                                 </defs>
-                                <image clip-path="url(#clipPath4)" width="1920" height="500" xlink:href="img/work4cover.jpg"></image>
+                                <image clip-path="url(#clipPath2)" width="1920" height="500" xlink:href="img/work2cover.jpg"></image>
                             </svg>
                             <div class="card__content">
                                 <i class="card__btn-close fa fa-times">X</i>
                                 <div class="card__caption">
-                                    <h2 class="card__title">Prototype Demo</h2>
-                                    <p class="card__subtitle">使用 Hype Pro 製作的 prototype</p>
+                                    <h2 class="card__title">機械表造型時間顯示網頁</h2>
+                                    <p class="card__subtitle">經典復刻</p>
                                 </div>
                                 <div class="card__copy">
                                     <div class="meta">
                                         <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
                                         <span class="meta__author">Gary Wang</span>
-                                        <span class="meta__date">01/11/2016</span>
+                                        <span class="meta__date">05/30/2016</span>
                                     </div>
-                                    <p>這個 prototype 主要是為了表現 NavBar 上的 icon 在點擊之後所呈現的一種 3D 旋轉的效果，在已經有 mockup 的情形下，製作的時間大約 2 個小時。</p>
-                                    <p>此 prototype 是以 Hype pro 進行製作。Hype Pro 是一個製作互動式多媒體內容的工具軟體，我喜歡用他來製作 prototype 由於他可以針對不同尺寸的設備進行設計，也支援各種主流的動畫形式，甚至可以加入自己寫的 javascript，自由度極高，因此成為我製作 prototype 的首選工具。</p>
-                                    <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/Projects/prototypeDemo/3d_flip_demo.html">http://garytest.pancakeapps.com/Projects/prototypeDemo/3d_flip_demo.html</a></p>
-                                    <p>待頁面載入完成後，可以看到 NavBar 上第一個 icon 進行 3D 旋轉，點擊第 3 個通訊 icon 則可以看到畫面切換，並且 icon 進行旋轉。</p>
+                                    <p>為了讓負責廣告業務的同事去提案，所討論出 Oris 可能會感興趣的互動式廣告。</p>
+                                    <p>由於對方是瑞士百年機械表大廠，設計精美的指針表盤即是他們的特色，因此，希望藉由機械表介面的對時功能，來達到品牌印象的強化，同時也可以增加產品的曝光。</p>
+                                    <p>有別於製作一般數字時鐘，只要用 javascript 取得時間，再設計其呈現的樣式即可，要呈現傳統的時鐘介面，需要將時間換算成指針的角度，此外，最大的挑戰在於，在不同螢幕尺寸的設備上，需要讓時針、分針、秒針對齊，不會跑版才行。</p>
+                                    <p>另外，為了達到產品曝光的效果，還製作了產品規格介紹，並透過按鈕來開啟，以避免干擾產品的呈現效果。</p>
+                                    <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/Projects/OrisWatch/">http://garytest.pancakeapps.com/Projects/OrisWatch/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                <div class="card__container card__container--closed">
+                    <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+                        <defs>
+                            <clipPath id="clipPath3">
+                                <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+                                <circle class="clip" cx="960" cy="250" r="992"></circle>
+                            </clipPath>
+                        </defs>
+                        <image clip-path="url(#clipPath3)" width="1920" height="500" xlink:href="img/work3cover.png"></image>
+                    </svg>
+                    <div class="card__content">
+                        <i class="card__btn-close fa fa-times">X</i>
+                        <div class="card__caption">
+                            <h2 class="card__title">XONE App</h2>
+                            <p class="card__subtitle">豐富你的行動生活</p>
+                        </div>
+                        <div class="card__copy">
+                            <div class="meta">
+                                <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
+                                <span class="meta__author">Gary Wang</span>
+                                <span class="meta__date">06/9/2016</span>
+                            </div>
+                            <p>目前公司的主要產品，我負責規劃介面的操作流程、資訊架構與訂製視覺設計規範。</p>
+                            <p>我是公司第一位設計師，因此從視覺設計、切圖到與需求端的溝通，與工程師的溝通，甚至多國語系的字串表等都由我負責。</p>
+                            <img class="articleImg" src="img/flow.png" />
+                            <p>為了使溝通更加流暢，並且為了利於後續新進人員快速進入狀況，我陸續開始建立一些標準作業流程，以及設計規範。</p>
+                            <img class="articleImg" src="img/flow2.png" />
+                            <p>後續其他同事進來後，我們就一起將規範文件建立的更加完善。</p>
+                            <img class="articleImg" src="img/guideline.png" />
+                            <p>App 下載：</p>
+                            <p><a href="https://play.google.com/store/apps/details?id=net.connexionone.android.xone" target="_blank">Android 版</a>、<a href="https://itunes.apple.com/app/xone-media/id981354458" target="_blank">iOS 版</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="card">
+                <div class="card__container card__container--closed">
+                    <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+                        <defs>
+                            <clipPath id="clipPath4">
+                                <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+                                <circle class="clip" cx="960" cy="250" r="992"></circle>
+                            </clipPath>
+                        </defs>
+                        <image clip-path="url(#clipPath4)" width="1920" height="500" xlink:href="img/work4cover.jpg"></image>
+                    </svg>
+                    <div class="card__content">
+                        <i class="card__btn-close fa fa-times">X</i>
+                        <div class="card__caption">
+                            <h2 class="card__title">Prototype Demo</h2>
+                            <p class="card__subtitle">使用 Hype Pro 製作的 prototype</p>
+                        </div>
+                        <div class="card__copy">
+                            <div class="meta">
+                                <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
+                                <span class="meta__author">Gary Wang</span>
+                                <span class="meta__date">01/11/2016</span>
+                            </div>
+                            <p>這個 prototype 主要是為了表現 NavBar 上的 icon 在點擊之後所呈現的一種 3D 旋轉的效果，在已經有 mockup 的情形下，製作的時間大約 2 個小時。</p>
+                            <p>此 prototype 是以 Hype pro 進行製作。Hype Pro 是一個製作互動式多媒體內容的工具軟體，我喜歡用他來製作 prototype 由於他可以針對不同尺寸的設備進行設計，也支援各種主流的動畫形式，甚至可以加入自己寫的 javascript，自由度極高，因此成為我製作 prototype 的首選工具。</p>
+                            <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/Projects/prototypeDemo/3d_flip_demo.html">http://garytest.pancakeapps.com/Projects/prototypeDemo/3d_flip_demo.html</a></p>
+                            <p>待頁面載入完成後，可以看到 NavBar 上第一個 icon 進行 3D 旋轉，點擊第 3 個通訊 icon 則可以看到畫面切換，並且 icon 進行旋轉。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="card">
+                        <div class="card__container card__container--closed">
+                            <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <clipPath id="clipPath5">
+                                        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath5)" width="1920" height="500" xlink:href="img/work5cover.jpg"></image>
+                            </svg>
+                        <div class="card__content">
+                            <i class="card__btn-close fa fa-times">X</i>
+                            <div class="card__caption">
+                                <h2 class="card__title">餐廳體驗回饋問卷</h2>
+                                <p class="card__subtitle">使用者體驗設計的集大成</p>
+                            </div>
+                            <div class="card__copy">
+                                <div class="meta">
+                                    <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
+                                    <span class="meta__author">Gary Wang</span>
+                                    <span class="meta__date">06/21/2016</span>
+                                </div>
+                                <p>表單設計可說是使用者體驗的集大成，如何讓使用者填答的順手、快速完成，並且支援各種設備，是設計的重點。</p>
+                                <p>這個問卷設計包括了單選題、複選題、題組、個人資料等類型，每種題型都有對應的機制，例如單選題只要使用者點擊一個選項，就會自動跳到下一題，若是複選題，則會讓使用者填到上限為止。</p>
+                                <p>在填答的過程中會顯示共有幾題，目前填到第幾題，可以減輕使用者不耐煩的感覺。</p>
+                                <p>這個專案使用了 jQuery，並將部份 function 抽象化以便重複使用；另外以 Google Script 將最後填答的結果儲存在 Google  試算表。整個專案開發時間約 6 小時。</p>
+                                <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/ConneXionONE/share/web/%E4%BA%92%E5%8B%95%E6%A9%9F%E5%88%B6/%E5%95%8F%E5%8D%B7/restaurant/q.html">請點我</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__container card__container--closed">
+                            <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <clipPath id="clipPath6">
+                                        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath6)" width="1920" height="500" xlink:href="img/work6cover.jpg"></image>
+                            </svg>
+                            <div class="card__content">
+                                <i class="card__btn-close fa fa-times">X</i>
+                                <div class="card__caption">
+                                    <h2 class="card__title">你是重返 20 歲電影中的哪一個角色</h2>
+                                    <p class="card__subtitle">復古風心理測驗小遊戲</p>
+                                </div>
+                                <div class="card__copy">
+                                    <div class="meta">
+                                        <img class="meta__avatar" src="img/avatar.jpg" alt="author02" />
+                                        <span class="meta__author">Gary Wang</span>
+                                        <span class="meta__date">01/9/2015</span>
+                                    </div>
+                                    <p>心理測驗是表單設計的變形，但更接近遊戲的形式。</p>
+                                    <p>這個測驗設計旨在簡單、有效率，以達到讓使用者快速得到答案，並產生後續的病毒擴散效果。</p>
+                                    <p>在填答的過程中會顯示共有幾題，目前填到第幾題，可以減輕使用者不耐煩的感覺。</p>
+                                    <p>這個專案使用了 jQuery，正規表達式的應用，並將部份 function 抽象化以便重複使用。整個專案開發時間約 3 小時，不包含視覺設計的部份。</p>
+                                    <p>Demo 網址：<a target="_blank" href="http://garytest.pancakeapps.com/ConneXionONE/share/web/%E4%BA%92%E5%8B%95%E6%A9%9F%E5%88%B6/backto20/index.html">請點我</a></p>
                                 </div>
                             </div>
                         </div>
