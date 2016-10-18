@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+@import url(http://fonts.googleapis.com/css?family=Muli:300);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+
+
+
+
+* {
+    outline: none;
+}
+
+body {
+	background-image: url(../img/bg_front.png), url(../img/bg_back.png);
+	background-position:bottom center, center;
+	background-repeat:no-repeat, repeat;
+	background-size:100%, 100%;
+	background-attachment:fixed;
+	text-align:center;
+	color:#2f2f2f;
+	font-family: 'Muli','cwTeXHei', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height:1.5em;
+	margin:0;
+}
+
+
+	#bg_front {
+		position:fixed;
+		bottom:0;
+		z-index:999;
+		left:0;
+		width:100%;
+	}
+	
+table {
+	margin:0 auto;
+}
+
+
+	td {
+		text-align:right;
+		padding:2px 3px;
+	}
+
+
+	input {
+		border:2px solid #C7A659;
+		height:27px;
+	}
+
+#title {
+	margin:30px 0 0;
+}
+
+.quiz, #forms, #result {
+	text-align:left;
+	max-width:250px;
+	margin:20px auto 0;
+}
+
+	.quiz {
+		font-size:24px;
+		line-height:1.6em;
+	}
+
+
+#options {
+	position:fixed;
+	bottom:25px;
+	text-align:center;
+	width:100%;
+	z-index:1000;
+}
+
+	#yes, #no, #next {transition: all .2s ease-in-out;}
+	#yes:active, #no:active, #next:active {transform:scale(0.7)}
+
+#progress {
+	position:fixed;
+	bottom:10px;
+	text-align:center;
+	width:100%;
+	font-size:18px;
+	color:#fff;
+	text-shadow:rgba(0,0,0,0.8);
+}
+
+#reminder {
+	text-align:center;
+	max-width:280px;
+	margin:10% auto;
+	font-size:13px;
+	margin-bottom:100px;
+}
+	
+#forms {
+	text-align:center;
+}
+
+.alert {
+	text-align:center;
+	font-size:11px;
+	color:#FF0307;
+	
+}
+	#alert1 {display:none}
+	#alert2 {display:none}
+
+	#next-active {display:none;}
+
+
+#popup{
+	background:#fff;
+	padding:5% 10% 10% 10%;
+	text-align:left;
+	position:fixed;
+	width:96%;
+	top:25%;
+	margin-left:2%;
+	box-sizing:border-box;
+	
+}
+	#close-btn {
+		position:fixed;
+		top:27%;
+		right:4%;
+		
+	}
+	
+	#filter {
+		display:none;
+		background:rgba(50,50,50,0.63);
+		width:100%;
+		height:100%;
+		position:fixed;
+		top:0;
+		z-index:9999;
+		
+	}
+		
