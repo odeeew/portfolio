@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="CACHE-CONTROL" content="No-cache">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+	<title>送出中</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+	<div id="dialog1" class="mask" style="display:block;">
+		<div class="dialog">
+			<div class="dialogContent">
+				<h3>問卷送出中</h3>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--取得 client ip-->
+<script type="text/javascript">
+	var userip;
+</script>
+<script type="text/javascript" src="https://www.l2.io/ip.js?var=userip"></script>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		var u = window.location.href,
+			v = decodeURIComponent(u.split('?', 2)[1]),
+			answered = '<h3>您已經填過囉</h3><p>謝謝您的熱情參與</p>',
+			success = '<h3>問卷已成功送出</h3><p>感謝您的參與</p>',
+			ip = v.split('&', 14)[0].split('=', 2)[1];
+
+		//處理已填過的狀況
+		if (v == 'answered') {
+			$('.dialogContent').html(answered);
+
+			//把用戶 ip 跟 cookie 裡面的紀錄比對
+		} else if (userip == Cookies.get('ip')) {
+			$('.dialogContent').html(answered);
+		} else {
+			//顯示成功訊息
+			$('.dialogContent').html(success);
+
+			//把用戶的 ip 塞到 cookies
+			Cookies.set('ip', ip);
+		}
+	});
+</script>
+
+</html>

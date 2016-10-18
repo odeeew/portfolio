@@ -1,0 +1,696 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="CACHE-CONTROL" content="No-cache">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <title>「食」問卷調查表 </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="storeBanner"></div>
+        <div class="content" id="q1" max="1">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>1</h2>
+                </div>
+                <h3>這是您第幾次來<span class="storeName">(店家名稱)</span>用餐</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li>首次光臨</li>
+                <li>1～3 次</li>
+                <li>3 次以上</li>
+            </ul>
+        </div>
+        <div class="content" id="q2" max="9">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>2</h2>
+                </div>
+                <h3>您是透過哪些管道得知<span class="storeName">(店家名稱)</span>的消息？</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li>媒體報導</li>
+                <li class="other">
+                    <label>App 介紹&nbsp;
+                        <input type="text" name="app"><span class="hidden"></span></label>
+                </li>
+                <li class="other">
+                    <label>網路介紹&nbsp;
+                        <input type="text" name="website"><span class="hidden"></span></label>
+                </li>
+                <li><span class="storeName">(店家名稱)</span>官網/FB 粉絲團</li>
+                <li>廣告</li>
+                <li>信用卡</li>
+                <li>親友介紹</li>
+                <li>路過</li>
+                <li class="other">
+                    <label>其他：
+                        <input type="text" name="other"><span class="hidden"></span></label>
+                </li>
+            </ul>
+        </div>
+        <div class="content rating" id="q3" max="5" min="4">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>3</h2>
+                </div>
+                <h3>對於本店提供的餐點：</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li>風味口感&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+                <li>餐點份量&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+                <li>出餐速度&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+                <li>用餐環境&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+            </ul>
+        </div>
+        <div class="content rating" id="q4" max="3" min="2">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>4</h2>
+                </div>
+                <h3>對於本店提供的服務：</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li>接待禮儀&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+                <li>服務效率&nbsp;<span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></li>
+                <li class="other">
+                    <label>我想表揚服務人員：
+                        <input type="text" name="other"><span class="hidden"></span></label>
+                </li>
+            </ul>
+        </div>
+        <div class="content" id="q5" max="1">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>5</h2>
+                </div>
+                <h3>您願意再次來店用餐嗎？</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li class="jump" jump="q7">願意</li>
+                <li>不願意</li>
+            </ul>
+        </div>
+        <div class="content" id="q6" max="1">
+            <div class="q">
+                <div class="q-icon">
+                    <img src="img/Q.png">
+                    <h2>6</h2>
+                </div>
+                <h3>承上題，請問不願意再來的原因？</h3>
+            </div>
+            <div class="des"><span class="hint">單選題</span><span class="progress"></span></div>
+            <ul>
+                <li>餐點口味</li>
+                <li>服務品質</li>
+                <li>用餐環境</li>
+                <li>地點便利性</li>
+                <li>價格因素</li>
+                <li class="other">其他：
+                    <input type="text"><span class="hidden"></span>
+                </li>
+            </ul>
+        </div>
+        <form id="form" action="finish.html">
+            <input name="ip" type="hidden">
+            <input name="q1" type="hidden">
+            <input name="q2" type="hidden">
+            <input name="q3" type="hidden">
+            <input name="q4" type="hidden">
+            <input name="q5" type="hidden">
+            <input name="q6" type="hidden">
+            <div class="content" id="q7">
+                <div class="q">
+                    <div class="q-icon">
+                        <img src="img/Q.png">
+                        <h2>7</h2>
+                    </div>
+                    <h3>基本資料</h3>
+                </div>
+                <div class="des">所有選項都是必填<span class="progress"></span></div>
+                <ul class="input">
+                    <li>性別：
+                        <input type="radio" name="gender" value="male" checked>&nbsp;男&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="female">&nbsp;女
+                    </li>
+                    <li>生日：
+                        <select>
+                            <option>請選擇</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>&nbsp;月&nbsp;&nbsp;
+                        <select>
+                            <option>請選擇</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>&nbsp;日</li>
+                    <li>
+                        <p>職業：</p>
+                        <div class="col-left">
+                            <input type="radio" name="job" id="student" value="學生">&nbsp;
+                            <label for="student">學生</label>
+                            <br/>
+                            <input type="radio" name="job" id="government" value="軍公教">&nbsp;
+                            <label for="government">軍公教</label>
+                            <br/>
+                            <input type="radio" name="job" id="worker" value="工">&nbsp;
+                            <label for="worker">工</label>
+                        </div>
+                        <div class="col-right">
+                            <input type="radio" name="job" id="servant" value="服務業">&nbsp;
+                            <label for="servant">服務業</label>
+                            <br/>
+                            <input type="radio" name="job" id="free" value="自由業">&nbsp;
+                            <label for="free">自由業</label>
+                            <br/>
+                            <input type="radio" name="job" id="retire" value="退休人士">&nbsp;
+                            <label for="retire">退休人士</label>
+                            <br/>
+                        </div>
+                        <input type="radio" name="job" id="other" value="其他">&nbsp;
+                        <label for="other">其他&nbsp;
+                            <input type="text"> </label>
+                    </li>
+                    <li>
+                        <p>年齡：
+                            <p/>
+                            <div class="col-left">
+                                <input type="radio" name="age" id="15" value="~15">&nbsp;
+                                <label for="15">15 歲以下</label>
+                                <br/>
+                                <input type="radio" name="age" id="16" value="16~25">&nbsp;
+                                <label for="16">16~25 歲</label>
+                                <br/>
+                                <input type="radio" name="age" id="26" value="26~35">&nbsp;
+                                <label for="26">26~35 歲</label>
+                            </div>
+                            <div class="col-right">
+                                <input type="radio" name="age" id="36" value="36~45">&nbsp;36~45 歲
+                                <br/>
+                                <input type="radio" name="age" id="46" value="46~55">&nbsp;46~55 歲
+                                <br/>
+                                <input type="radio" name="age" id="55" value="55~">&nbsp;55 歲以上
+                            </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns">
+                <span id="previous" class="btnP">上一題</span>
+                <input id="submit" style="-webkit-appearance: none;font-size:100%;border:0;" type="submit" class="submit btnP disable" value="確定送出">
+                <span id="next" class="btnP disable">下一題</span>
+            </div>
+        </form>
+    </div>
+    <div id="dialog1" class="mask">
+        <div class="dialog">
+            <div class="dialogContent"></div>
+            <div class="btns">
+                <span class="btnS">修改答案</span>
+                <span class="btnP">下一題</span>
+            </div>
+        </div>
+    </div>
+    <div id="dialog2" class="mask">
+        <div class="dialog">
+            <div class="dialogContent">
+                <h3>謝謝您的作答！</h3>
+                <p>您已獲得填寫問卷獎勵50分鐘！</p>
+                <p>※ 您已享有「熱門電影」或「免費咖啡」抽獎機會，XONE APP 將於近日抽出中獎者並另行通知！</p>
+            </div>
+            <div class="btns">
+                <span class="btnP">確定</span>
+            </div>
+        </div>
+    </div>
+    <div id="dialog3" class="mask">
+        <div class="dialog">
+            <p class="center"></p>
+            <div class="btns">
+                <span class="btnP">確定</span>
+            </div>
+        </div>
+    </div>
+    <div class="mask" id="mask"></div>
+    <div class="toast" id="toast1">作答已完成！</div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--驗證資料欄位-->
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/messages_zh_TW.js"></script>
+<!--自訂驗證格式-->
+<script type="text/javascript">
+    jQuery.validator.addMethod("twMobile",
+        function (cellphone, element) {
+
+            cellphone = cellphone.replace(/\s+/g, "");
+
+            return (
+                this.optional(element) || /[0][9][0-9]{8}/.test(cellphone));
+
+        }, "請輸入09XXXXXXXX");
+
+    jQuery.validator.addMethod("email",
+        function (email, element) {
+
+            email = email.replace(/\s+/g, "");
+
+            return (
+                this.optional(element) || /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/.test(email));
+
+        }, "請輸入正確的 email 格式");
+</script>
+<!--取得 client ip-->
+<script type="text/javascript">
+    var userip;
+</script>
+<script type="text/javascript" src="https://www.l2.io/ip.js?var=userip"></script>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+<script>
+    $('#form').validate();
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        setTimeout(function () {
+            // preload image 
+            new Image().src = "img/selected.png";
+            new Image().src = "img/unselect.png";
+        }, 1000);
+    };
+
+    $(document).ready(function () {
+        //判斷是否已過期
+        var now = new Date(),
+            endD = '2116-12-18 23:59:59'; //設定結束時間
+
+        if (now > Date.parse(endD).valueOf()) {
+            window.location.replace("index.html?isEnd=yes");
+        }
+
+
+        //取得 ip 並塞入隱藏欄位
+        //var ip = returnCitySN["cip"];
+
+        $('input[name=ip]').val(userip);
+
+        //判斷是否填寫過
+        //透過查cookie
+
+        if (userip == Cookies.get('ip')) {
+            window.location.replace("finish.html?answered");
+        }
+
+
+        //顯示第一題
+        $('#q1').show();
+
+        //用參數跳到某一題 for debug
+        var u = window.location.href, //取得網址
+            j2q = u.split('?', 2)[1]; //取得參數
+        if (j2q > 1) {
+            $('.content:visible').hide();
+            $('#q' + j2q).fadeIn(500);
+        }
+
+        //取得答案上限以顯示填答提示
+        var qNum = $('.content').size();
+        for (i = 0; i < qNum; i++) {
+            var max = $('.content').eq(i).attr('max');
+            //如果是複選題
+            if (max > 1) {
+                //更改填答提示
+                $('#q' + (i + 1) + ' .des .hint').html('多選題(最多可選' + max + '個答案)');
+                //在選項後面增加隱藏字元
+                $('#q' + (i + 1) + ' li').append('<span class="hiddenComm">,</span>');
+            }
+        }
+
+        $('.rating .des .hint').html('請點選星號表達您的滿意程度，1 顆星為待改進，4 顆星為非常滿意');
+
+        //顯示填答進度
+        function progress() {
+            var currentQ = $('.content:visible').attr('id'),
+                currQn = parseInt(currentQ.split('q', 2)[1]),
+                qNum = $('.content').size();
+            $('.content:visible .progress').html(currQn + '/' + qNum);
+        }
+        progress();
+
+        //直接跳到某一題
+        function jump(qn) {
+            //alert(jump);
+            var currentQ = $('.content:visible').attr('id'),
+                currQn = parseInt(currentQ.split('q', 2)[1]);
+
+            $('.content:visible').hide();
+            $('#' + qn).fadeIn(500);
+            $('#' + qn).addClass('jumped from_' +
+                currentQ);
+            progress();
+            if ($('#' + qn + ' li').hasClass('selected')) {
+                $('#next').removeClass('disable');
+            } else {
+                $('#next').addClass('disable');
+            }
+        }
+
+        //設定用戶的答案
+        function setAns() {
+            var currentQ = $('.content:visible').attr('id'),
+                currQn = parseInt(currentQ.split('q', 2)[1]);
+
+            //選項中有包含「其他」時
+            if ($('.content:visible li.selected').hasClass('other')) {
+                //把 input 的值塞入隱藏欄位
+                $('.content:visible .hidden').html($('.content:visible li input').val());
+            }
+
+            //取得選取的答案
+            var ans = $('.content:visible li.selected').text();
+
+            //將欄位清空
+            $('input[name="q' + currQn + '"]').val('');
+            //將答案塞入隱藏欄位中
+            $('input[name="q' + currQn + '"]').val(ans);
+        }
+
+        //跳下一題
+        function goNext() {
+            var currentQ = $('.content:visible').attr('id'),
+                currQn = parseInt(currentQ.split('q', 2)[1]),
+                count = $('.content:visible .selected').size(),
+                max = parseInt($('.content:visible').attr('max')),
+                jumpQn = $('.content:visible .selected').attr('jump'); //跳選題號;
+
+            //如果要跳選的話
+            if ($('.content:visible .selected').hasClass('jump')) {
+                setAns();
+                jump(jumpQn);
+                //計算題目數量
+                var qNum = $('.content').size(),
+                    jumpNum = jumpQn.split('q', 2)[1];
+                console.log(jumpNum, qNum);
+                if (parseInt(jumpNum) == qNum) {
+                    $('#next').hide();
+                    $('#submit').show();
+                    $('#submit').removeClass('disable');
+                }
+                //如果選了「其他」選項，檢查 input 是否空白
+            } else if ($('.content:visible .selected').hasClass('other') && $('.content:visible .other input').val() == '') {
+
+                $('#dialog3 p').html('請輸入「其他」選項的答案');
+                $('#dialog3').show();
+
+            } else {
+
+                setAns();
+
+                //顯示下一題
+                $('#q' + currQn).hide();
+                $('#q' + (currQn + 1)).fadeIn(500);
+
+                //顯示填答進度
+                progress();
+
+                //如果下一題已有選項被選
+                if ($('#q' + (currQn + 1) + ' li').hasClass('selected')) {
+                    $('#next').removeClass('disable');
+                } else {
+                    $('#next').addClass('disable');
+                }
+
+                //計算題目數量
+                var qNum = $('.content').size();
+
+                //處理下一題按鈕的顯示
+                //如果下一題是最後一題
+                if (currQn == (qNum - 1)) {
+                    $('#next').hide();
+                    $('#submit').show();
+                    $('#submit').removeClass('disable');
+
+                    //如果下一題不是最後一題
+                } else {
+                    $('#next').css('display', 'inline-block');
+                    $('#submit').addClass('disable');
+                    $('#submit').hide();
+                }
+            }
+            //顯示上一題按鈕
+            $('#previous').css('display', 'inline-block');
+        }
+
+        //選「其他」選項時的處理
+        function other(inputName) {
+            var max = parseInt($('.content:visible').attr('max')); //選項上限
+            //單選題
+            if (max == 1) {
+                //移除所有選項的被選狀態
+                $('.content:visible li').removeClass('selected');
+                $('.content:visible li.other').toggleClass('selected');
+            }
+            //使文字輸入欄位獲得 focus
+            //            console.log(inputName);
+            $('.content:visible li input[name=' + inputName + ']').focus();
+        }
+
+        function rating() {
+            //點擊評分題中的星星時
+            $('.rating:visible span.star').click(function () {
+                //移除所有點亮的星星
+                $(this).parent().find('span.star').removeClass('star-select');
+                //點亮被選中的星星
+                $(this).toggleClass('star-select');
+                //將前面的星星一起點亮
+                var index = $(this).index();
+                if (index > 0) {
+                    for (i = 0; i < index; i++) {
+                        $(this).parent().find('span.star').eq(i).addClass('star-select');
+                    }
+                }
+                //所有選項都答完之後才能進入下一題
+                $(this).parent().addClass('rated');
+                var min = parseInt($('.content:visible').attr('min')),
+                    rateCount = $('.content:visible .rated').size();
+                if (rateCount == min) {
+                    $('#next').removeClass('disable');
+                }
+            });
+        }
+
+        //點擊選項
+        $('.content li').click(function () {
+
+            var count = $('.content:visible .selected').size(), //被選數量
+                max = parseInt($('.content:visible').attr('max')); //選項上限
+
+            //單選題
+            if (max == 1) {
+                $('.content:visible li').removeClass('selected');
+                $(this).toggleClass('selected');
+
+                //如果有 jump 選項
+                if ($('.content:visible li').hasClass('jump')) {
+                    var j_id = $('.content:visible .jump').attr('jump'),
+                        q_id = $('.content:visible').attr('id');
+                    //移除 jump 過的 class
+                    $('#' + j_id).removeClass('jumped from_' + q_id);
+                    goNext();
+                } else if ($(this).hasClass('other')) { //選其他時
+                    other();
+                    $('#next').removeClass('disable');
+                } else {
+                    goNext();
+                }
+            }
+
+            //多選題
+            if (max > 1 && !$('.content:visible').hasClass('rating')) {
+                //如果點的是已選項目
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+
+                    if ((count - 1) == 0) {
+                        $('#next').addClass('disable');
+                    }
+
+                    //選其他時
+                    if ($(this).hasClass('other')) {
+                        other();
+                    }
+                } else { //如果點未選項目
+                    //移除下一步按鈕的 disable 樣式
+                    $('#next').removeClass('disable');
+                    //如果已達選項上限
+                    if ((count + 1) == max) {
+                        $(this).addClass('selected');
+                        //選其他時
+                        if ($(this).hasClass('other')) {
+                            other();
+                        } else {
+                            goNext();
+                        }
+
+                        //如果未達選項上限
+                    } else if ((count + 1) < max) {
+                        $(this).addClass('selected');
+
+                        //選其他時
+                        if ($(this).hasClass('other')) {
+                            var inputName = $(this).find('input').attr('name');
+                            other(inputName);
+                        }
+
+                        //如果超過選項上限
+                    } else if ((count + 1) > max) {
+                        $('#dialog1 .dialogContent').html('<h3>選完囉！</h3><p>您已經選了' + max + '個選項<br>可以點下一步或點修改答案<br><span class="highlight">點擊已選項目可以取消選取喔 ^_^</span></p>');
+                        $('#dialog1').fadeIn();
+                    }
+                }
+            }
+            //點擊評分題時
+            if ($('.content:visible').hasClass('rating')) {
+                $(this).removeClass('selected');
+            }
+        });
+
+        //跳上一題
+        $('#previous').click(function () {
+            var currentQ = $('.content:visible').attr('id'),
+                currQn = parseInt(currentQ.split('q', 2)[1]),
+                count = $('#q' + (currQn - 1) + ' .selected').size();
+
+            //跳選過的處理
+            if ($('.content:visible').hasClass('jumped')) {
+                var from = $('.content:visible').attr('class').split('from_', 2)[1];
+                $('.content:visible').hide();
+                $('#' + from).fadeIn(500);
+                //下一步按鈕
+                if ($('#' + from + ' li').hasClass('selected')) {
+                    $('#next').removeClass('disable');
+                } else {
+                    $('#next').addClass('disable');
+                }
+            } else {
+                $('#q' + currQn).hide();
+                $('#q' + (currQn - 1)).fadeIn(500);
+                $('#next').removeClass('disable');
+            }
+            $('#submit').hide();
+            $('#next').css('display', 'inline-block');
+
+            //針對第 1 題(從第 2 題往前)隱藏跳上一題的按鈕
+            if (currQn == '2') {
+                $('#previous').hide();
+            } else {
+                //否則顯示上一題按鈕
+                $('#previous').css('display', 'inline-block');
+            }
+        });
+
+        //跳下一題
+        $('#next').click(function () {
+            //處理未選時的狀況
+            if ($(this).hasClass('disable')) {
+                $('#dialog3 p').html('請選擇答案');
+                $('#dialog3').show();
+            } else {
+                goNext();
+                //如果下一題是評分題
+                if ($('.content:visible').hasClass('rating')) {
+                    //disable li 的 click event
+                    event.stopPropagation();
+                    rating();
+                }
+            }
+        });
+
+        //點擊 dialog1 中的下一步按鈕
+        $('#dialog1 .btnP').click(function () {
+            $('#dialog1').fadeOut();
+            $('.toast').hide();
+            goNext();
+        });
+
+        //點擊 dialog1 中的取消按鈕
+        $('#dialog1 .btnS').click(function () {
+            $('#dialog1').fadeOut();
+        });
+
+        //點擊 dialog2 中的確定按鈕
+        $('#dialog2 .btnP').click(function () {
+            //關閉 dialog
+            $('#dialog2').animate({
+                opacity: 0
+            }, 500);
+            $('#dialog2 .dialog').hide();
+            $('.toast').hide();
+        });
+
+        //點擊 dialog3 中的確定按鈕
+        $('#dialog3 .btnP').click(function () {
+            $('#dialog3').fadeOut();
+
+            //如果有「其他」選項未填寫，使其獲得 focus
+            if ($('.content:visible li.selected').hasClass('other')) {
+                $('.content:visible li input').focus();
+            }
+        });
+
+    });
+</script>
+
+</html>
