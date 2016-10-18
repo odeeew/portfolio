@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Clock</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <style type="text/css">
+        * {margin: 0;padding: 0;}
+        body {
+        	background: #010001 url(img/bg.png);
+        	background-repeat: no-repeat;
+        	background-position: center top;
+			background-size: cover;
+        	font-family: "microsoft jhenghei", helvetica;
+        	font-size: 1em;
+        	overflow-x: hidden;
+        }
+        #container {
+        	width: 100%;
+        	height: 100vh;
+        	max-width: 1200px;
+        	position: absolute;
+        	overflow: hidden;
+			display: flex;
+			align-items: center;
+        }
+		#content {display: flex}
+		#text {
+			width: 151px;
+			height: 80vh;
+			/*position: absolute;*/
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			top: 30px;
+			margin-left: 20px;
+			text-align: center;
+			font-size: 0.8em;
+			color: #fff;
+			z-index: 2;
+		}
+        #logo {}
+        #text p {width: 100%;font-size: 1.5em;font-weight: 500;}
+		#name {width: 100%;align-self: flex-end}
+        #name img {margin: 10px 0 0 0;}
+        .btn {
+        	text-align: center;
+        	font-size: 0.83em;
+        	border:solid 1px #fff;
+        	border-radius: 5px;
+        	padding:5px;
+        	margin:20px auto 0 auto;
+        	width: 50%;
+        	max-width: 100px;
+        	background-color: rgba(0,0,0, 0.4);
+        	cursor: pointer;
+        }
+        #clock {
+        	position: absolute;
+        	width: 100%;
+        	max-width: 600px;
+        	height: 100%;
+        	max-height: 600px;
+        	/*margin:30px 0 0 -40px;*/
+        	background: url(img/face_O.png);
+        	background-size: 100%;
+        	background-repeat: no-repeat;
+        	list-style: none;
+        	z-index: 1;
+        }
+        #sec, #min, #hour {
+        	position: absolute;
+        	max-width: 30px;
+        	max-height: 600px;
+        	top: 0px;
+        }
+        #sec {background: url(img/sechand_O.png);z-index: 4;}
+        #min {background: url(img/minhand_O.png);z-index: 3;}
+        #hour {background: url(img/hourhand_O.png);z-index: 2;}
+        p {text-align: center;padding: 10px 0 0 0;}
+        #mask {opacity: 0;display: none;position: fixed;width: 100%;height: 100%;top:0;left:0;background: rgba(0,0,0, 0.7);}
+        #detail {position: absolute;width: 96%;height: 96%;top:2%;left:2%;color:#fff;max-width: 600px;}
+        
+        .product strong {display: block;}
+        .product p {text-align: left;margin: 0 0 26px 0;}
+        .product dl{padding-top:5px;border-bottom:1px solid #a5a5a5;padding-bottom:5px;color:#fff;clear:both;font-size:11px}
+		.product dl dt{clear:both;overflow:hidden;background:url(img/product_accordion.png) no-repeat 110% 4px}
+		.product dl.close dt{background:url(img/product_accordion.png) no-repeat 100% 4px;cursor:pointer;-webkit-transition:all .5s ease-in-out;-moz-transition:all .5s ease-in-out;-o-transition:all .5s ease-in-out;transition:all .5s ease-in-out}
+		.product dl.open dt{background:url(img/product_accordion.png) no-repeat 100% 100%;color:#e20613}
+		.product dl.open dt strong{color:#e20613}
+		.product dl dt strong{float:left;width:100px;color:#fff;font-weight:normal;text-transform:uppercase}
+		.product dl dt span{float:left;width:180px}
+		.product dl.open dt span{display:none}
+		.product dl dd{clear:both;overflow:hidden;height:150px;display:none;margin-top:5px;padding-top:10px;border-top:1px solid #a5a5a5}
+		.product .open dd{display:block;}
+		.product .content,.nano .product .content{margin-top:10px!important;padding-bottom:10px;padding-right:0!important}
+		.product .pane{margin-top:5px}
+		.product .content div{clear:both;overflow:hidden;margin-bottom:6px}
+		.product dl dd strong{float:left;width:100px;color:#fff;font-weight:normal;padding-left:11px}
+		.product dl dd span{float:left;width:180px;line-height:14px}
+		.nano{position:relative;width:100%;height:100%;overflow:hidden;outline:0}
+		.nano .content{position:absolute;overflow:scroll;overflow-x:hidden;top:0;right:0;bottom:0;left:0;margin-top:0;outline:0}
+		.nano .content:focus{outline:thin dotted}
+		.nano .content::-webkit-scrollbar{visibility:hidden}
+		.has-scrollbar .content::-webkit-scrollbar{visibility:visible}
+		.nano>.pane{background:#969799;position:absolute;width:7px;right:0;top:0;bottom:0;visibility:hidden\9;opacity:.01;-webkit-transition:.2s;-moz-transition:.2s;-o-transition:.2s;transition:.2s;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:inset 2px 0 1px 0 #6e6e70;box-shadow:inset 2px 0 1px 0 #6e6e70;outline:0}
+		.nano>.pane>.slider{background:#f5f5f5 url(img/scrollbar.gif) repeat-y 0 0;position:relative;margin:1px 1px 0;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}
+		.nano:hover>.pane,.pane.active,.pane.flashed{visibility:visible\9;opacity:.99}
+
+		@media only screen and (orientation:portrait) {
+			body {background-image:url(img/bgPortrait.jpg);background-size: initial}
+		}
+
+		@media only screen and (orientation: portrait) and (min-width: 501px){
+			body {background-size: cover}
+		}
+		@media only screen and (max-width: 767px) {
+			#text {margin: 0;height: 90vh}
+			#clock {margin: 20vh 0 0 0;top:0}
+			#content {justify-content: center;align-items: center;width: 100%}
+		}
+		
+        @media only screen and (min-width : 600px) {
+         	#container, #detail {
+         		left:50%;
+         		margin-left: -300px;;
+         	}
+         }
+         @media only screen and (max-width:320PX ) {
+         	#clock {
+         		background: url(img/face_O_320.png) no-repeat;
+         		background-size: 100%;
+         	}
+         }
+         @media only screen and (max-width:360px ) {
+     		#clock {
+	 			background: url(img/face_O_360.png) no-repeat;
+	 			background-size: 100%;	
+     		}
+     	}
+    </style>
+    <script type="text/javascript">
+    	
+	//設定指針尺寸及 responsive 位移
+	function resize(){
+     		var w = $("ul").width();
+	      	$("li").css({
+	      		"width":w*0.05,
+	      		"height":w,
+	      		"left":w*0.5-w*0.025 + "px",
+	      		"background-size": "100%"
+	      	});
+//	      	$("#name").css("margin-top",w*0.45 + "px");
+     	}
+	//計算時間及指針角度
+	function getS(){
+		var seconds = new Date().getSeconds();
+	  	var sdegree = seconds * 6;
+	  	var srotate = "rotate(" + sdegree + "deg)";
+	  
+	  	$("#sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+	}
+	function getM(){
+		var mins = new Date().getMinutes();
+	  	var mdegree = mins * 6;
+	  	var mrotate = "rotate(" + mdegree + "deg)";
+	  
+	  	$("#min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+	}
+	function getH(){
+		var hours = new Date().getHours();
+      	var mins = new Date().getMinutes();
+      	var hdegree = hours * 30 + (mins / 2);
+      	var hrotate = "rotate(" + hdegree + "deg)";
+	  
+	  	$("#hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+	}
+    	
+    $(document).ready(function() {
+     	getS();
+     	getM();
+     	getH();
+     	
+	  	setInterval( function() {getS();}, 1000 );
+      	setInterval( function() {getM();}, 1000 );
+	  	setInterval( function() {getH();}, 1000 );
+	  
+     	resize();
+     	
+     	//處理規格畫面的顯示
+     	$("#detail_btn").click(function(){
+     		$("#mask").css({"display":"block","z-index":"5"}).animate({"opacity":"1"},800);
+     		$("#text").animate({"opacity":"0"},500);
+     	});
+     	//處理規格畫面的關閉
+     	$("#close_btn").click(function(){
+     		$("#mask").css("z-index","1").animate({"opacity":"0"},500);
+     		$("#text").animate({"opacity":"1"},500);
+    	 });
+     	
+     	//處理規格表格的展開
+     	$("dl").click(function(){
+     		$(".open").removeClass("open");
+     		if (this.className == "close"){
+     			$(this).toggleClass("open");	
+     		}
+     		$(".open").click(function(){
+	     		$(this).toggleClass("open");
+	     	});
+     	});
+ 	});
+        
+    $(window).resize(function(){
+		resize();
+	});
+    
+    </script>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+		<div id="text">
+			<div id="logoContainer">
+				<img id="logo" src="img/title.png"  />
+				<p>邀您對時</p>
+			</div>
+			<div id="name">
+				Oris Aquis<br />
+				Date Orange<br />
+				<div id="detail_btn" class="btn">
+					詳細規格
+				</div>
+			</div>
+		</div>
+		<ul id="clock">	
+		   	<li id="sec"></li>
+		   	<li id="hour"></li>
+			<li id="min"></li>
+		</ul>
+		</div>
+	</div>
+	<div id="mask">
+		<div id="detail" class="product">
+			<div class="description">
+			
+			<h2 itemprop="name">Oris Aquis Date Orange</h2>
+			<p itemprop="description">
+				<strong>時間之海 </strong>
+				投入大量的研發與集思廣益，成就Oris Aquis這支不受限於外型設計的多功能腕錶。不僅符合都市叢林的風格品味，也同時適應深海環境的嚴峻考驗。
+			</p>
+			<dl class="close">
+				<dt><strong>錶殼</strong> <span>Oris Aquis, 40.00 mm, 1.575英吋, 不銹鋼</span></dt>
+				<dd class="nano has-scrollbar" style="height: 131px;">
+					<div class="content" tabindex="0">
+						<div><strong>材質</strong>	<span>多片式不鏽鋼表殼，陶瓷上圈標記分鐘刻度</span></div>
+						<div><strong>尺寸</strong>	<span>40.00 mm, 1.575英吋</span></div>
+						<div><strong>上蓋</strong>	<span>內外側有球形切割的抗折射藍寶石水晶玻璃表鏡</span></div>
+						<div><strong>後蓋</strong>	<span>不鏽鋼錶殼，螺旋式後蓋，透明礦物玻璃表背</span></div>
+						<div><strong>操作裝置</strong>	<span>不鏽鋼螺旋式安全表冠</span></div>
+						<div><strong>防水</strong>	<span>30 bar</span></div>
+						<div class="pane" style="opacity: 1; visibility: visible;"><div class="slider" style="height: 102px; top: 0px;"></div></div>
+					</div>
+				</dd>
+			</dl>
+			<dl class="close">
+				<dt><strong>機芯</strong> <span>自動上鍊 日期顯示</span></dt>
+				<dd class="nano">
+					<div class="content">
+						<div><strong>號碼</strong>	<span>Oris 733, 底座 SW 200-1</span></div>
+			<div><strong>尺寸</strong>	<span>&#216; 25.60 mm, 11 1/2’’’</span></div>
+			<div><strong>功能</strong>	<span>中央顯示時分秒，日期視窗，瞬間換日裝置，日期調整器，精準對時微調裝置及停秒裝置</span></div>
+			<div><strong>上鍊</strong>	<span>自動上鍊，雙向轉動紅色自動盤</span></div>
+			<div><strong>動力儲存</strong>	<span>38小時</span></div>
+			<div><strong>振動</strong>	<span>28’800 A/h, 4 Hz</span></div>
+			<div><strong>寶石 </strong>	<span>26</span></div>
+			
+					</div>
+				</dd>
+			</dl>
+			<dl class="close">
+				<dt><strong>錶盤</strong> <span>黑色</span></dt>
+				<dd class="nano">
+					<div class="content">
+						<div><strong>材質</strong>	<span>黑色錶盤</span></div>
+			<div><strong>發光物質</strong>	<span>發光塗料指針與刻度</span></div>
+			
+					</div>
+				</dd>
+			</dl>
+			<dl class="close">
+				<dt><strong>皮帶/金屬鍊帶</strong> <span>橡膠</span></dt>
+				<dd class="nano">
+					<div class="content">
+						<div><strong>材質</strong>	<span>黑色橡膠表帶搭配不鏽鋼安全摺疊帶扣</span></div>
+			
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><strong>型號</strong> <span itemprop="identifier" content="mpn:01 733 7676 4154-07 4 21 34">01 733 7676 4154-07 4 21 34</span></dt>
+			</dl>
+		</div>
+		<div id="close_btn" class="btn">關閉</div>
+		</div>
+	</div>
+</body>
+</html>
