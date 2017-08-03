@@ -120,15 +120,18 @@
 }
 
 .card__btn-close {
-	font-size: 22px;
-	position: absolute;
+	font-size: 28px;
+	position: fixed;
 	top: 0;
 	right: 0;
 	padding: 36px;
 	cursor: pointer;
 	font-family: Quicksand;
 	font-style: normal;
-	font-weight: bolder
+	font-weight: bolder;
+    z-index: 9999;
+    color:#fff;
+    text-shadow: 0 0 25px #222;
 }
 
 .card__container--closed .card__btn-close {
