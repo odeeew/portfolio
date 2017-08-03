@@ -17,7 +17,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+    font-family: "文泉驛正黑", "WenQuanYi Zen Hei", "PingFang TC", "微軟正黑體", "Microsoft JhengHei", Arial, sans-serif, "標楷體", DFKai-SB;
 }
 
 /*
@@ -211,7 +211,7 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 .card__container {z-index: 999}
 .card__container--closed {border-radius: 8px;border-bottom:solid 3px #b3b3b3}
 .card__caption h2 {font-family: cwTeXYen,Quicksand}
-.card__content p {font-size:1em;text-align: justify;word-break: break-all}
+.card__content p {font-size:1em;text-align: justify;word-break: break-all;font-weight: 200}
 p.card__subtitle {font-size: 0.95em}
 .card__content li {font-size: 1em;margin: 7px 0}
 .articleImg {width:100%}
