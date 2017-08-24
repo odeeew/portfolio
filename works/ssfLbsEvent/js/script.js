@@ -89,7 +89,7 @@ $(function() {
 
   			//string append to sorted_stores_list
   			var _str = '';
-  			for(var i=0;i<5;i++)
+  			for(var i=0;i<3;i++)
   			{
   				var idx = sortable[i][0];
   				
