@@ -1,0 +1,327 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset Css*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration:none;
+	}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+body{
+	background:url(../images/bg.png) #292229 repeat-x left bottom fixed;
+	background-size: 470px auto;
+	}
+	
+.wpage{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+	}
+
+.img img,
+img{
+	width:100%;
+	}
+
+.header{
+	width: 100%;
+	position: relative;
+}
+.header .logo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20%;
+}
+.header .banner{
+	width: 96%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 80px;
+}
+	.header .banner img{
+		margin-bottom: 20px;
+	}
+	.header .banner img:first-child{
+		/*width: 98%;*/
+	}
+ 	.campaign {
+		color: #D1B64F;
+		padding: 3%;
+		background-color: rgba(29, 24, 29,0.6);
+	}
+	.campaign h3 {
+		font-size: 28px;
+		font-weight: bold;
+		line-height: 35px;
+		letter-spacing: 0.2em;
+	}
+	.campaign .small {
+		font-size: 0.6em;
+		font-weight: normal;
+	}
+	.notice{
+		width: 94%;
+		margin: 0 auto;
+		color: #454547;
+		font-size: 80%;
+		line-height: 130%;
+	}
+		.notice li{
+			padding-bottom: 5px;
+			text-indent: -11px;
+			padding-left: 13px;
+		}
+		.notice li a{
+			color: #454547;
+		}
+
+/*門市*/
+.maplist{
+	margin-top: 16px;
+}
+.maplist .list-group{
+	margin-bottom: 30px;
+}
+	.maplist .list-group:last-child{
+		margin-bottom: 10px;
+	}
+
+.maplist .list-group .title{
+	position: relative;
+	width: 100%;
+	padding-top: 20px;
+}
+.maplist .list-group .title h1{
+	color: #d1b64f;
+	padding-left: 3%;
+	padding-bottom: 6px;
+	font-size: 110%;
+	font-weight: bold;
+}
+.maplist .list-group .title .select_city{
+	color: #D1B64F;
+	background: #5a160c;
+	padding: 8px 3%;
+}
+	.maplist .list-group .title .select_city h2{
+		font-size: 80%;
+		font-weight: lighter;
+	}
+.maplist .list-group .title span.icon_store{
+	position: absolute;
+	width: 120px;
+	right: 3%;
+	top: 1%;
+}
+
+.maplist .list-group .title .select{
+	background: url(../images/arrow.png) no-repeat 49.5% 66%;
+	background-size: auto 50%;
+	padding-top: 8px;
+}
+	.maplist .list-group .title .select select{
+		border:0;
+  		-webkit-border-radius:0;
+  		border-radius:0;
+	    appearance:none;
+	    -moz-appearance:none;
+	    -webkit-appearance:none;
+	    padding:8px 3%;
+	    background:url("../images/arrow2.png") no-repeat scroll 95% center transparent;
+	    background-size: 5% 35%;
+		background-color:#D1B64F;
+		color: #5a160c;
+		width: 47%;
+		font-size: 90%;
+	}
+	.maplist .list-group .title .select select:first-child{
+		margin-right: 4%;
+	}
+	.maplist .list-group .title .select select::-ms-expand { display: none; }
+
+.maplist .list-group li{
+	border-bottom: 1px solid #D1B64F;
+	padding: 10px 3%;
+	position: relative;
+}
+	.maplist .list-group li:last-child{
+		border-bottom: 0;
+	}
+	.maplist .list-group li h4{
+		font-size: 110%;
+		padding: 2% 0;
+		color:#fffce3;
+	}
+	.maplist .list-group li p{
+		font-size: 80%;
+		padding-bottom: 2%;
+		color:#a9a99a;
+	}
+	.maplist .list-group li a{
+		display: block;
+		width: 6%;
+		position: absolute;
+		top: 25%;
+		right: 3%;
+	}
+	.maplist .list-group li .btn_phone{
+		right: 11%;
+	}
+
+.maplist .list-group .tip{
+	background: url(../images/tip_bg.png) no-repeat center 45%;
+	background-size: auto 50%;
+	padding: 60px 3%;
+	text-align: center;
+	color: #a9a99a;
+	font-size: 90%;
+	line-height: 130%;
+}
+
+.footer{
+	padding-top: 20px;
+}
+.footer .slogan{
+	padding: 10px 0;
+	font-size: 100%;
+	color: #927376;
+	text-align: center;
+}
+.footer .copyright{
+	padding: 6px 0;
+	text-align: center;
+	font-size: 7px;
+	color: #898988;
+	background-color: #1d181d;
+	margin-bottom: 10px;
+}
+/*btn group*/
+.btn-group{
+	width: 100%;
+	position: relative;
+	height: 46px;
+}
+	.btn-group a{
+		display: block;
+		background: #D1B64F;
+		color: #5a160c;
+		position: absolute;
+		width: 27.8%;
+		padding: 15px 0 15px 22%;
+		border-bottom: #63532c 3px solid;
+		box-shadow: rgba(0,0,0,0.7) 0 5px 10px;
+	}
+		.btn-group a .icon{
+			display: block;
+			position: absolute;
+			width: 6.5%;
+			left: 30%;
+			top: 24%;
+		}
+		.btn-group .btn_phone{
+			left: 0;
+		}
+		.btn-group .btn_web{
+			right: 0;
+		}
+			.btn-group .btn_web .icon{
+				width: 7.5%;
+			}
+
+
+/*//////////////////////////////////*/
+/*////           RWD           ////*/
+/*/////////////////////////////////*/
+@media (max-width: 480px) {
+	.header .banner{
+		padding-top: 50px;
+	}
+	.maplist .list-group .title{
+		padding-top: 14px;
+	}
+	.maplist .list-group .title span.icon_store{
+		width: 28%;
+		top: 5%;
+	}
+		.maplist .list-group:last-child .title span.icon_store{
+			top: 3%;
+		}
+	.maplist .list-group .title .select{
+		background-position: 49.8% 66%;
+	}
+	.maplist .list-group .title .select select{
+		background-size: 10% 35%;
+		width: 47%;
+	}
+	.maplist .list-group li a{
+		width: 12%;
+		top: 17%;
+	}
+	.maplist .list-group li .btn_phone{
+		right: 17.5%;
+	}
+	.btn-group a{
+		width: 29.8%;
+		padding: 15px 0 15px 20%;
+	}
+	.btn-group a .icon{
+		width: 13%;
+		left: 18%;
+		top: 24%;
+	}
+	.btn-group .btn_web .icon{
+		width: 14.5%;
+	}
+}
