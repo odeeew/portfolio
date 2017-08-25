@@ -258,7 +258,8 @@ img{
 		background: #D1B64F;
 		color: #5a160c;
 		position: absolute;
-		width: 27.8%;
+		/*width: 27.8%;*/
+		width: 45%;
 		padding: 15px 0 15px 22%;
 		border-bottom: #63532c 3px solid;
 		box-shadow: rgba(0,0,0,0.7) 0 5px 10px;
@@ -274,11 +275,15 @@ img{
 			left: 0;
 		}
 		.btn-group .btn_web{
-			right: 0;
+			/*right: 0;*/
+			left:50%;
+			margin-left: -22.5%;
+			box-sizing: border-box;
 		}
 			.btn-group .btn_web .icon{
-				width: 7.5%;
-			}
+				/*width: 7.5%;*/
+			    width: 11%;
+            }
 
 
 /*//////////////////////////////////*/
@@ -313,7 +318,7 @@ img{
 		right: 17.5%;
 	}
 	.btn-group a{
-		width: 29.8%;
+		/*width: 29.8%;*/
 		padding: 15px 0 15px 20%;
 	}
 	.btn-group a .icon{
