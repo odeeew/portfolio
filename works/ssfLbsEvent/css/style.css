@@ -110,7 +110,14 @@ img{
 	.campaign .small {
 		font-size: 0.6em;
 		font-weight: normal;
+        letter-spacing: 0.1em;
 	}
+    .campaign .highlight {
+        font-size: 0.9em;
+        font-weight: bold;
+        /*background-color: #D1B64F;*/
+        color: #ba1cbf;
+    }
 	.notice{
 		width: 94%;
 		margin: 0 auto;
