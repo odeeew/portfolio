@@ -5,12 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <span id="startLat"></span><span id="startLon"></span>
+    <p id="startLat"></p>
+    <p id="startLon"></p>
 </body>
 <script>
     window.onload = PrintVersion();
 	/* 偵測瀏覽器版本資訊*/
 	function PrintVersion() {
+		getLocation();
 		var ua = navigator.userAgent;
 		var msg = "<br\>瀏覽器相關資訊<br\><br\>";
 		if (ua.match(/mobile/gi) != null){
@@ -52,8 +54,8 @@
 		var startPos;
 		var geoSuccess = function(position) {
 			startPos = position;
-			document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-			document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+			document.getElementById('startLat').innerHTML = "latitude = " + startPos.coords.latitude;
+			document.getElementById('startLon').innerHTML = "longitude = " + startPos.coords.longitude;
 		};
 		navigator.geolocation.getCurrentPosition(geoSuccess);
 
