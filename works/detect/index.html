@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    window.onload = PrintVersion();
+	/* 偵測瀏覽器版本資訊*/
+	function PrintVersion() {
+		var msg = "<br\>瀏覽器相關資訊<br\><br\>";
+		msg += "瀏覽器名稱 : " + navigator.appName + "<br\>";
+		msg += "瀏覽器版本 : " + navigator.appVersion + "<br\>";
+		msg += "瀏覽器程式碼 : " + navigator.appCodeName + "<br\>";
+		msg += "cookie功能是否開啟 : " + navigator.cookieEnabled + "<br\>";
+		msg += ShowMimeContent();
+		msg += "作業系統 : " + navigator.platform + "<br\>";
+		msg += "HTTP協定使用者代理 : " + navigator.userAgent + "<br\>";
+		msg += getLocation();
+		document.write(msg);
+	}
+	//顯示Mime內容
+	function ShowMimeContent() {
+		var msg = "";
+		if (navigator.mimeTypes.length == 0) {
+			msg += "mimeTypes.length : " + navigator.mimeTypes.length + "<br\>";
+			return msg;
+		}
+		msg += "mimeTypes.length : " + navigator.mimeTypes.length + "<br\>";
+		msg += "mimeTypes : <br\>";
+		for (var myIndex = 0; myIndex < navigator.mimeTypes.length; myIndex++) {
+			for (var myProperty in navigator.mimeTypes[myIndex]) {
+				msg += myProperty;
+				msg += ":";
+				msg += navigator.mimeTypes[myIndex][myProperty];
+				msg += "<br\>";
+			}
+			msg += "<br\>";
+		}
+		return msg;
+	}
+	function getLocation() {
+		var startPos;
+		var geoSuccess = function(position) {
+			startPos = position;
+			var msg = "";
+			msg += "Latitude = " + startPos.coords.latitude + "<br\>";
+			msg += "Longitude = " + startPos.coords.longitude;
+			return msg;
+		};
+		navigator.geolocation.getCurrentPosition(geoSuccess);
+
+	}
+</script>
+</html>
