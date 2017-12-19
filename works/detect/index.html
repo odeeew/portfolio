@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
 </head>
 <body>
-    <p id="startLat"></p>
-    <p id="startLon"></p>
+    位置相關資訊<br/>
+    <span id="startLat"></span><br/>
+    <span id="startLon"></span><br/>
+    <span id="altitude"></span><br/>
+    <span id="speed"></span><br/><br/>
+    <a id="vibrate" href="javascript:vibrate();">振動測試</a><br/><br/>
+    設備角度<br/>
+    <span id="orientationZ"></span><br/>
+    <span id="orientationX"></span><br/>
+    <span id="orientationY"></span><br/><br/>
 </body>
 <script>
     window.onload = PrintVersion();
+    window.addEventListener("deviceorientation", callback);
 	/* 偵測瀏覽器版本資訊*/
 	function PrintVersion() {
 		getLocation();
 		var ua = navigator.userAgent;
-		var msg = "<br\>瀏覽器相關資訊<br\><br\>";
+		var msg = "瀏覽器相關資訊<br\>";
 		if (ua.match(/mobile/gi) != null){
 			msg += "設備種類：手機<br\>";
         } else {
@@ -56,9 +66,19 @@
 			startPos = position;
 			document.getElementById('startLat').innerHTML = "latitude = " + startPos.coords.latitude;
 			document.getElementById('startLon').innerHTML = "longitude = " + startPos.coords.longitude;
+			document.getElementById('altitude').innerHTML = "altitude = " + startPos.coords.altitude;
+			document.getElementById('speed').innerHTML = "speed = " + startPos.coords.speed;
 		};
 		navigator.geolocation.getCurrentPosition(geoSuccess);
 
 	}
+	function vibrate() {
+		navigator.vibrate(1000);
+	}
+    function callback(event){
+	    document.getElementById('orientationZ').innerHTML = "Z 軸：" + event.alpha;
+	    document.getElementById('orientationX').innerHTML = "X 軸：" + event.beta;
+	    document.getElementById('orientationY').innerHTML = "Y 軸：" + event.gamma;
+    }
 </script>
 </html>
