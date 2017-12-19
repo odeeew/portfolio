@@ -16,9 +16,9 @@
 		var ua = navigator.userAgent;
 		var msg = "<br\>瀏覽器相關資訊<br\><br\>";
 		if (ua.match(/mobile/gi) != null){
-			msg += "使用手機<br\>";
+			msg += "設備種類：手機<br\>";
         } else {
-		    msg += "使用桌機<br\>"
+		    msg += "設備種類：桌機<br\>"
         }
 		msg += "瀏覽器名稱 : " + navigator.appName + "<br\>";
 		msg += "瀏覽器版本 : " + navigator.appVersion + "<br\>";
