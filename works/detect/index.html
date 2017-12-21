@@ -13,13 +13,18 @@
     <span id="speed"></span><br/><br/>
     <a id="vibrate" href="javascript:vibrate();">振動測試</a><br/><br/>
     設備角度<br/>
-    <span id="orientationZ"></span><br/>
     <span id="orientationX"></span><br/>
-    <span id="orientationY"></span><br/><br/>
+    <span id="orientationY"></span><br/>
+    <span id="orientationZ"></span><br/><br/>
+    加速計<br/>
+    <span id="motionX"></span><br/>
+    <span id="motionY"></span><br/>
+    <span id="motionZ"></span><br/><br/>
 </body>
 <script>
     window.onload = PrintVersion();
-    window.addEventListener("deviceorientation", callback);
+    window.addEventListener("deviceorientation", oriCallback);
+    window.addEventListener("devicemotion", motionCallback);
 	/* 偵測瀏覽器版本資訊*/
 	function PrintVersion() {
 		getLocation();
@@ -75,10 +80,15 @@
 	function vibrate() {
 		navigator.vibrate(1000);
 	}
-    function callback(event){
+    function oriCallback(event){
 	    document.getElementById('orientationZ').innerHTML = "Z 軸：" + event.alpha;
 	    document.getElementById('orientationX').innerHTML = "X 軸：" + event.beta;
 	    document.getElementById('orientationY').innerHTML = "Y 軸：" + event.gamma;
+    }
+    function motionCallback(event) {
+        document.getElementById('motionX').innerHTML = "X 軸：" + event.acceleration.x;
+        document.getElementById('motionY').innerHTML = "Y 軸：" + event.acceleration.y;
+        document.getElementById('motionZ').innerHTML = "Z 軸：" + event.acceleration.z;
     }
 </script>
 </html>
