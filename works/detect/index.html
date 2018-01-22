@@ -6,22 +6,25 @@
     <title>Title</title>
 </head>
 <body>
-    位置相關資訊<br/>
-    <span id="startLat"></span><br/>
-    <span id="startLon"></span><br/>
-    <span id="altitude"></span><br/>
-    <span id="speed"></span><br/><br/>
-    <a id="vibrate" onclick="vibrate();">振動測試</a><br/><br/>
-    設備角度<br/>
-    <span id="orientationX"></span><br/>
-    <span id="orientationY"></span><br/>
-    <span id="orientationZ"></span><br/><br/>
-    加速計<br/>
-    <span id="motionX"></span><br/>
-    <span id="motionY"></span><br/>
-    <span id="motionZ"></span><br/><br/>
-    <a id="playBtn" onclick="playBGM()">播放音樂</a>
-    <audio id="bgm" src="https://s3-us-west-2.amazonaws.com/adlocus-promo/2017Xmas/audio/Jingle_Bells_7.mp3" autoplay="false"></audio>
+    <p>位置相關資訊<br>
+        <span id="startLat"></span><br>
+        <span id="startLon"></span><br>
+        <span id="altitude"></span><br>
+        <span id="speed"></span><br>
+    </p>
+    <p><a id="vibrate" onclick="vibrate();">振動測試</a></p>
+    <p>設備角度<br/>
+        <span id="orientationX"></span><br/>
+        <span id="orientationY"></span><br/>
+        <span id="orientationZ"></span><br/>
+    </p>
+    <p>加速計<br/>
+        <span id="motionX"></span><br/>
+        <span id="motionY"></span><br/>
+        <span id="motionZ"></span><br/>
+    </p>
+    <p><a id="playBtn" onclick="playBGM()">播放音樂</a>
+    <audio id="bgm" src="https://s3-us-west-2.amazonaws.com/adlocus-promo/2017Xmas/audio/Jingle_Bells_7.mp3" autoplay="false"></audio></p>
 </body>
 <script>
     window.onload = PrintVersion();
