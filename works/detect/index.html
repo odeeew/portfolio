@@ -26,6 +26,7 @@
     <p><a id="playBtn" onclick="playBGM()">播放音樂</a>
     <audio id="bgm" src="https://s3-us-west-2.amazonaws.com/adlocus-promo/2017Xmas/audio/Jingle_Bells_7.mp3" autoplay="false"></audio></p>
 </body>
+<script type="text/javascript" src="https://www.l2.io/ip.js?var=userip"></script>
 <script>
     window.onload = PrintVersion();
     window.addEventListener("deviceorientation", oriCallback);
@@ -48,6 +49,7 @@
 		msg += "作業系統 : " + navigator.platform + "<br\>";
 		msg += "語言：" + navigator.language + "<br\>";
 		msg += "HTTP協定使用者代理 : " + navigator.userAgent + "<br\>";
+		msg += "ip:" + userip;
 		document.write(msg);
 	}
 	//顯示Mime內容
