@@ -1,0 +1,273 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {box-sizing: border-box}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans TC", Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+.float {
+    position: fixed;
+    right:30px;
+    bottom:30px;
+    z-index: 9999;
+    text-align: center;
+    height: 120px;
+    width: 120px;
+    padding: 18px 0;
+    border-radius: 50%;
+    color:#685E4C;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    background: linear-gradient(180deg, #FFEFBE 0%, #F2C94C 100%);
+}
+@media screen and (max-width: 650px) {
+    .float {
+        width: 90px;
+        height: 90px;
+        font-size: 18px;
+        padding: 16px 0;
+    }
+}
+@media screen and (max-width: 414px) {
+    .float {bottom:60px}
+}
+.video {
+    width: 100%;
+    background: #f2f2f2;
+    z-index: 1;
+    margin-top: -88px;
+    height: 720px;
+}
+@media screen and (max-width: 650px) {
+    .video {margin-top: -44px}
+}
+@media screen and (max-width: 414px) {
+    .video {margin-top: -15px;height: 500px}
+}
+.video1, video {
+    /*1920x690*/
+    height: calc((100vw / 1920) * 690);
+    margin-top: 0;
+}
+.content {
+    width: 860px;
+    padding: 22px 32px;
+    margin-top: -88px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+@media screen and (max-width: 859px) {
+    .content {width:100%;margin-top: -44px}
+}
+@media screen and (max-width: 414px) {
+    .content {margin-top: -15px}
+}
+.content h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #D8B456;
+    margin: 0 0 30px 0;
+}
+.content p, .content li {
+    font-size: 16px;
+    font-weight: 300;
+    color: #685E4C;
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+    text-align: justify;
+    text-justify: ideographic;
+    word-break: break-all;
+}
+.content p:nth-last-child(1) {
+    margin: 0;
+}
+.content ul {margin: 0 0 10px 0;padding-left: 18px}
+.content li {margin-bottom: 0}
+.intro h1 {
+    background: url("../img/logo.png") no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+@media screen and (max-width: 650px) {
+    .intro h1 {
+        height: 150px;
+        background-position: -15px bottom;
+        background-size: 200px auto;
+    }
+}
+@media screen and (max-width: 414px) {
+    .intro h1 {
+        background-position: right bottom;
+    }
+}
+.bg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -88px;
+}
+@media screen and (max-width: 859px) {
+    .bg {margin-top: -44px}
+}
+@media screen and (max-width: 414px) {
+    .bg {margin-top: -15px}
+}
+.bg1 {
+    background-image: url("../img/web_bg@2x.jpg");
+    padding: 148px 0;
+}
+@media screen and (max-width: 414px) {
+    .bg1 {background-position: right;padding: 70px 0}
+}
+.bg .content{margin: 0;background: rgba(51, 33, 5, 0.7);}
+.bg1 .content {
+    background: transparent;
+    box-shadow: none;
+}
+.bg1 h1 {
+    color: #FFFFFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bg1 p {font-weight: 400;}
+.bg1 img {
+    width: 547px;
+    display: block;
+    margin: 0 auto
+}
+.products {
+    display: block;
+    width: 100%;
+    margin-top: -263px;
+    z-index: 999;
+}
+@media screen and (max-width: 414px) {
+    .products {margin-top: -90px}
+}
+.content h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #D8B456;
+}
+.recruit {position: relative}
+.recruit p {margin-top: 10px}
+.btn {
+    display: inline-block;
+    background: #D8B456;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #685E4C;
+    cursor: pointer;
+}
+.recruit .btn {
+    position: absolute;
+    right:32px;
+    transform: translateY(-120px);
+}
+@media screen and (max-width: 414px) {
+    .recruit .btn {
+        position: static;
+        transform: none;
+    }
+}
+.album {display: flex;justify-content: space-between}
+.album img {
+    height: 126px;
+    width: 180px;
+    object-fit: cover;
+    display: inline-block;
+}
+.jobs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.jobs h1 {width: 100%}
+.jd {
+    width: 50%;
+    margin-bottom: 30px;
+}
+.jd:nth-last-child(1), .jd:nth-last-child(2) {
+    margin-bottom: 5px;
+}
+.jd h2 span {
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+@media screen and (max-width: 859px) {
+    .jd h2 {font-size: 18px}
+    .jd h2 span {font-size: 14px}
+    .jd p {font-size: 14px}
+}
+@media screen and (max-width: 650px) {
+    .jd h2 span {font-size: 12px;}
+}
+@media screen and (max-width: 414px) {
+    .jd {width: 100%}
+    .jd h2 {font-size: 24px}
+    .jd p {font-size: 16px}
+    .jd:nth-last-child(1), .jd:nth-last-child(2) {
+        margin-bottom: 30px;
+    }
+    .album {display: none}
+}
+.jd a {
+    color: #D8B456;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 3px dotted #D8B456;
+}
+.jd p {
+    margin: 0;
+}
+.jd p:nth-last-of-type(1) {margin-bottom: 5px}
+.jd.album {
+    position: relative;
+    top:-55px;
+    margin-bottom: 0;
+}
+.jd.album img {margin-right: 15px}
+.bg2 {
+    background-image: url("../img/web_bg2@2x.jpg");
+    padding: 204px 0;
+}
+@media screen and (max-width:414px) {
+    .bg2 {padding: 100px 0}
+}
+.bg2 p, .bg li {color: #fff}
+.bg3 {
+    background-image: url("../img/web_bg3@2x.jpg");
+    background-position-y: bottom;
+    padding: 316px 0 32px 0;
+}
+.bg3 p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 0.2em;
+    color: #D8B456;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6)
+}
+.footer {background: #fff;}
+.footer a {display: inline-block}
+.footer img {vertical-align: middle}
+.footer .logo {width: 195px}
+.footer .icon {width: 40px}
+.footer .link_fb {margin-left: 20px}
