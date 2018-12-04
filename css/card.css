@@ -1,7 +1,7 @@
 /* CARD */
 
 .card {
-	position: relative;
+	position: relative;/*relative*/
 	/*float: left;*/
 	width: 46%;
 	height: 0;
@@ -12,13 +12,13 @@
 }
 
 .card__container {
-	position: fixed;
+	position: fixed;/*fixed*/
 	top: 0;
 	left: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
-	width: 100%;
-	height: 100%;
+	width: 100%;/*100%*/
+	height: 100%;/*100%*/
 	-webkit-transform: translate3d(0, 0, 0);
 	/* prevents flicker */
 
