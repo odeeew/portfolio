@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     <!-- Place favicon.ico in the root directory -->
+    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" as="script">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="lib/cntl.min.css">
   	<link rel="stylesheet" type="text/css" href="css/card.css">
@@ -40,14 +41,14 @@
                     <h1>Gary Wang</h1>
                     <div id="titleContainer">
                         <p>Hi 你好～</p>
-                        <p>我是一位 UX 設計師</p>
-                        <p>也是一位 UI 設計師</p>
-                        <p>也是一位 互動設計師</p>
-                        <p>也是一位 網頁設計師</p>
+                        <p>我是一位 網頁設計師</p>
+                        <p>也是一位 前端工程師</p>
+                        <p>也是一位 UX 設計師</p>
                         <p>其實我是</p>
-                        <p>產品設計師</p>
+                        <p>前端設計師</p>
                     </div>
                 </div>
+                <div class="scrollNotice animated infinite fadeInUp">↑</div>
             </div>
             <div id="menu"><span id="menuAbout">About</span><span id="menuSkills">Skills</span><span id="menuExperiences">Experiences</span><span id="menuWorks">Works</span><span id="menuContact">Contact</span></div>
     </div>
@@ -56,6 +57,7 @@
             <div class="sectionContent">
                 <h1>About</h1>
                 <p>我熱愛學習新事物，同時也追求產品完善度與市場需求的平衡。熟悉模組化設計方法，以期縮短開發時程並提昇使用者體驗。擅長扮演介於設計師與工程師之間的角色。</p>
+                <p>除了界面設計之外，我也具有實作網路應用程式的能力，從操作流程設計、前端程式撰寫到資料庫 API 串接都有一定程度的熟悉，此外，也具有分析使用者行為的經驗，並且根據觀察使用者的使用情形，調整產品使用流程以達到更好的體驗。</p>
                 <p>我喜歡觀察並思考人與產品之間的互動，並嘗試以自然且不留痕跡的方式，引導使用者使用產品。</p>
                 <p>設計對我來說，不只是解決問題的方法，更是一種溝通語言，我不僅能透過設計和使用者溝通，更重要的是透過設計和工作夥伴溝通，讓產品的製作過程更加流暢。</p>
                 <p>我認為好的設計應該具有以下的特點：</p>
@@ -68,7 +70,7 @@
                     <li>愉悅用戶</li>
                     <li>沒有存在感</li>
                 </ul>
-                <p>我的設計流程會從需求分析開始，根據需求整理出 UI flow 與 wireframe，用以蒐集內部 feedback，接著根據 feedback 產出 mockup，用以蒐集外部 feedback，再根據 feedback 產出 prototype，並進行需求與實做的確認，最後產出 guideline，交由實做單位作出產品。</p>
+                <p>我的設計流程會從需求分析開始，根據需求整理出 UI flow 與 wireframe，用以蒐集內部 feedback，接著根據 feedback 產出 mockup，用以蒐集外部 feedback，再根據 feedback 產出 prototype，並進行需求與實做的確認，最後產出 guideline，實做作出產品。</p>
                 <!--<p class="center">-->
                 <!--<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" width="100%" src="https://prezi.com/embed/5h_tlrc-5dzi/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0VTVvcFZXeEc3K25XUER0OG8vUWxIZkV3PT0&amp;landing_sign=o6kYm9jwOPakbAeG_vOeuuJymIasGb50sYWDQOeVxOQ"></iframe>-->
                 <!--</p>-->
@@ -77,11 +79,46 @@
         <div class="section" id="Skills">
             <div class="sectionContent">
                 <h1>Skills</h1>
-                <p>我對學習有濃厚興趣，只要評估過後覺得實用的軟體或技術，都會花時間去嘗試與學習。在應用軟體部份，由於對操作介面有高度的敏銳度與學習能力，所以可以在短時間內掌握軟體的操作方法。而開發框架部分則是挑泛用性最廣的來學習使用。我熟悉行動網頁前端設計與優化，以及 Android 與 iOS 的介面準則。另外，目前正在學習 Vue.js 中。</p>
+                <p>我對學習有濃厚興趣，只要評估過後覺得實用的軟體或技術，都會花時間去嘗試與學習。在應用軟體部份，由於對操作介面有高度的敏銳度與學習能力，所以可以在短時間內掌握軟體的操作方法。而開發框架部分則是挑泛用性最廣的來學習使用，目前正在學習 vue.js、node.js。我熟悉行動網頁前端設計與優化，以及 Android 與 iOS 的介面準則。</p>
                 <p>我認為產品的使用者體驗，不是一次到位的，而是逐漸提昇的，因此，產品推出後，需要藉由使用 A/B Testing、行為分析報表，甚至客服反應等觀察產品可以改進的地方，同時我也會利用高擬真的原型進行使用者體驗調查，以實際了解使用者的操作行為。</p>
                 <p>過往的工作經驗中，我學到在產品設計中最重要的一件事就是：絕不能單憑猜測就自以為了解使用者，所有的設計都必需是要有使用者的 feedback 作為根據。</p>
                 <p>以下列出對常用軟體使用及技術掌握的熟悉程度。</p>
                 <div id="skillContainer">
+                    <div class="skill">
+                        <p>HTML5<br>
+                            中上</p>
+                        <canvas id="html5" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>CSS3<br>
+                            熟悉</p>
+                        <canvas id="css3" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>jQuery<br>
+                            熟悉</p>
+                        <canvas id="jquery" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>Vue.js<br>
+                            中等</p>
+                        <canvas id="vue" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>Bootstrap<br>
+                            熟悉</p>
+                        <canvas id="bootstrap" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>RWD<br>
+                            熟悉</p>
+                        <canvas id="rwd" class="loader"></canvas>
+                    </div>
+                    <div class="skill">
+                        <p>WebStorm<br>
+                            中上</p>
+                        <canvas id="webstorm" class="loader"></canvas>
+                    </div>
                     <div class="skill productDesigner uiDesigner webDesigner">
                         <p>Photoshop<br>
                         非常熟悉</p>
@@ -107,41 +144,11 @@
                         中上</p>
                         <canvas id="axure" class="loader"></canvas>
                     </div>
-                    <div class="skill">
-                        <p>Hype Pro<br>
-                        中上</p>
-                        <canvas id="hype" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>WebStorm<br>
-                        中上</p>
-                        <canvas id="webstorm" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>HTML5<br>
-                        中上</p>
-                        <canvas id="html5" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>CSS3<br>
-                        熟悉</p>
-                        <canvas id="css3" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>jQuery<br>
-                            熟悉</p>
-                        <canvas id="jquery" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>Bootstrap<br>
-                        普通</p>
-                        <canvas id="bootstrap" class="loader"></canvas>
-                    </div>
-                    <div class="skill">
-                        <p>RWD<br>
-                            熟悉</p>
-                        <canvas id="rwd" class="loader"></canvas>
-                    </div>
+                    <!--<div class="skill">-->
+                        <!--<p>Hype Pro<br>-->
+                        <!--中上</p>-->
+                        <!--<canvas id="hype" class="loader"></canvas>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -476,7 +483,7 @@
     </div>
 </div>
 <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-<script type="text/javascript" src="js/vendor/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/vendor/jquery.classyloader.min.js"></script>
 <script type="text/javascript" src="lib/jquery.cntl.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

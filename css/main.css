@@ -11,7 +11,7 @@
    ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
-/*@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);*/
+@import url(//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
 *{box-sizing: border-box;}
 html {
     color: #222;
@@ -141,6 +141,7 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
 #coverContent #welcome h1 {font-family: Quicksand}
 #titleContainer {height: 22px;overflow: hidden}
 #titleContainer p {position: relative;margin: 0}
+.scrollNotice {margin-top: 40px}
 #cover #menu {
     align-self: flex-end;
     /*text-align: center;*/
