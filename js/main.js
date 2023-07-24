@@ -43,6 +43,7 @@ jQuery(document).ready(function(){
     jQuery('#bootstrap').parent('div').css('color','rgba(73, 52, 103, 1)');
     jQuery('#rwd').parent('div').css('color','rgba(86, 160, 155, 1)');
     jQuery('#vue').parent('div').css('color','rgba(71, 183, 132, 1)');
+    jQuery('#sql').parent('div').css('color', 'rgba(155, 21, 26)');
 
     jQuery('.card__image').click(function () {
         jQuery('.pattern').fadeIn(500).css({
