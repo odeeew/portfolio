@@ -97,7 +97,7 @@ jQuery(window).scroll(function () {
              'position': 'relative',
              'top': '0',
              'opacity': '1',
-             'background':'url("../img/cover.png") center center/cover no-repeat'
+             'background':'url("../portfolio/img/cover.png") center center/cover no-repeat'
          });
      }
 
