@@ -88,14 +88,16 @@ jQuery(window).scroll(function () {
              'position': 'fixed',
              'top': -(coverHeight + 30 - 54) + 'px',
              'z-index': '999',
-             'opacity': '0.9'
+             'background': 'rgba(54, 81, 74, .8)',
+             'backdrop-filter':'blur(4px)'
          });
      } else {
          jQuery('#coverPlaceholder').remove();
          jQuery('#cover').css({
              'position': 'relative',
              'top': '0',
-             'opacity': '1'
+             'opacity': '1',
+             'background':'url("../img/cover.png") center center/cover no-repeat'
          });
      }
 
