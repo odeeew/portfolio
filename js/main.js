@@ -2,7 +2,7 @@ jQuery.noConflict();
 
 jQuery(document).ready(function(){
 
-    var titleCount = jQuery('#titleContainer p').length - 1;
+    let titleCount = jQuery('#titleContainer p').length - 1;
     function titleScroll(){
         for (let i=0;i<titleCount;i++){
             jQuery('#titleContainer p').animate({'top':'-=22px'},2000)[i];
@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
     window.setTimeout(titleScroll,1000);
 
     jQuery('#menu span').click(function () {
-        var target = jQuery(this).attr('id').split('menu',2)[1];
+        let target = jQuery(this).attr('id').split('menu',2)[1];
         // console.log(jQuery('#Experiences').offset().top);
         jQuery('body,html').animate({
             scrollTop:(parseInt(parent.jQuery('#' + target).offset().top) - 44) + 'px'
@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
     });
 
     if (parseInt(jQuery(window).width()) < 767) {
-        var skillH = jQuery('#skillContainer').width() * 0.5;
+        let skillH = jQuery('#skillContainer').width() * 0.5;
         for (i=0;i<12;i++) {
             jQuery('#skillContainer').prepend('<div class="skillPlaceholder"></div>')[i];
         }
@@ -44,38 +44,38 @@ jQuery(document).ready(function(){
     jQuery('#rwd').parent('div').css('color','rgba(86, 160, 155, 1)');
     jQuery('#vue').parent('div').css('color','rgba(71, 183, 132, 1)');
     jQuery('#sql').parent('div').css('color', 'rgba(155, 21, 26, 1)');
+});
 
-    jQuery('.card__image').click(function () {
-        jQuery('.pattern').fadeIn(500).css({
-            'background': 'rgba(255,255,255,0.8)',
-            'display': 'block',
-            'opacity': '1',
-            'z-index': '1'
-        });
-        jQuery('.card').css('z-index','auto');
-        jQuery('.card__container--closed').css('border-bottom','solid 3px rgba(0,0,0,0)');
-	    jQuery('body').css('overflow-y','hidden');
-	    jQuery(this).closest('.card__container').find('.card__btn-close').fadeIn(5000);
+jQuery('.card__image').on('click', function () {
+    jQuery('.pattern').fadeIn(500).css({
+        'background': 'rgba(255,255,255,0.8)',
+        'display': 'block',
+        'opacity': '1',
+        'z-index': '1'
     });
+    jQuery('.card').css('z-index','auto');
+    jQuery('.card__container--closed').css('border-bottom','solid 3px rgba(0,0,0,0)');
+    jQuery('body').css('overflow-y','hidden');
+    jQuery(this).closest('.card__container').find('.card__btn-close').delay(2000).animate({'opacity':'1'},500);
+});
+jQuery('.card__btn-close').on('click', function () {
+    jQuery(this).animate({'opacity':'0'}, 500);
+    jQuery('body').css('overflow-y','auto');
+    function hidePattern() {
+        jQuery('.pattern').fadeTo('slow',0);
+    }
+    setTimeout(hidePattern,2000);
 
-    jQuery('.card__btn-close').click(function () {
-        jQuery(this).fadeOut(500);
-	    jQuery('body').css('overflow-y','auto');
-        function hidePattern() {
-            jQuery('.pattern').fadeTo('slow',0);
-        }
-        setTimeout(hidePattern,2000);
+    setTimeout(function(){
         jQuery('.card').css('z-index','1');
-        jQuery('.card__container--closed').css('border-bottom','solid 3px #b3b3b3');
-    });
+    }, 2000);
 
-
-
+    jQuery('.card__container--closed').css('border-bottom','solid 3px #b3b3b3');
 });
 
 jQuery(window).scroll(function () {
 
-    var scrollHeight =  parseInt(jQuery(window).scrollTop()),
+    let scrollHeight =  parseInt(jQuery(window).scrollTop()),
         viewportHeight = parseInt(jQuery(window).height()),
         skillPosition = Math.round(parseInt(jQuery('#skillContainer').offset().top)),
         coverHeight = jQuery('#cover').height();
@@ -97,7 +97,7 @@ jQuery(window).scroll(function () {
              'position': 'relative',
              'top': '0',
              'opacity': '1',
-             'background':'url("../portfolio/img/cover.png") center center/cover no-repeat'
+             'background':'url("/portfolio/img/cover.png") center center/cover no-repeat'
          });
      }
 
@@ -249,7 +249,7 @@ jQuery(window).scroll(function () {
         }).draw();
 
         if (parseInt(jQuery(window).width()) < 767) {
-            var skillH = jQuery('#skillContainer').width() * 0.5;
+            let skillH = jQuery('#skillContainer').width() * 0.5;
             jQuery('.skill').css({'width':'50%','height':skillH});
         }
     }
