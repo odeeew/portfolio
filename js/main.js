@@ -30,20 +30,20 @@ jQuery(document).ready(function(){
         }
     }
 
-    jQuery('#photoshop').parent('div').css('color','rgba(0, 160, 204, 1)');
-    jQuery('#illustrator').parent('div').css('color','rgba(204, 99, 0, 1)');
-    jQuery('#sketch').parent('div').css('color','rgba(198, 159, 54, 1)');
-    jQuery('#pixate').parent('div').css('color','rgba(0, 129, 178, 1)');
-    jQuery('#axure').parent('div').css('color','rgba(185, 32, 106, 1)');
-    jQuery('#hype').parent('div').css('color','rgba(188, 129, 60, 1)');
-    jQuery('#webstorm').parent('div').css('color','rgba(10, 174, 182, 1)');
-    jQuery('#html5').parent('div').css('color','rgba(193, 81, 33, 1)');
-    jQuery('#css3').parent('div').css('color','rgba(33, 135, 178, 1)');
-    jQuery('#jquery').parent('div').css('color','rgba(96, 166, 196, 1)');
-    jQuery('#bootstrap').parent('div').css('color','rgba(73, 52, 103, 1)');
-    jQuery('#rwd').parent('div').css('color','rgba(86, 160, 155, 1)');
-    jQuery('#vue').parent('div').css('color','rgba(71, 183, 132, 1)');
-    jQuery('#sql').parent('div').css('color', 'rgba(155, 21, 26, 1)');
+    // jQuery('#photoshop').parent('div').css('color','rgba(0, 160, 204, 1)');
+    // jQuery('#illustrator').parent('div').css('color','rgba(204, 99, 0, 1)');
+    // jQuery('#sketch').parent('div').css('color','rgba(198, 159, 54, 1)');
+    // jQuery('#pixate').parent('div').css('color','rgba(0, 129, 178, 1)');
+    // jQuery('#axure').parent('div').css('color','rgba(185, 32, 106, 1)');
+    // jQuery('#hype').parent('div').css('color','rgba(188, 129, 60, 1)');
+    // jQuery('#webstorm').parent('div').css('color','rgba(10, 174, 182, 1)');
+    // jQuery('#html5').parent('div').css('color','rgba(193, 81, 33, 1)');
+    // jQuery('#css3').parent('div').css('color','rgba(33, 135, 178, 1)');
+    // jQuery('#jquery').parent('div').css('color','rgba(96, 166, 196, 1)');
+    // jQuery('#bootstrap').parent('div').css('color','rgba(73, 52, 103, 1)');
+    // jQuery('#rwd').parent('div').css('color','rgba(86, 160, 155, 1)');
+    // jQuery('#vue').parent('div').css('color','rgba(71, 183, 132, 1)');
+    // jQuery('#sql').parent('div').css('color', 'rgba(155, 21, 26, 1)');
 });
 
 jQuery('.card__image').on('click', function () {
@@ -128,6 +128,47 @@ jQuery(window).scroll(function () {
     if ((scrollHeight + viewportHeight) - skillPosition > 0 && jQuery('.skill').css('display') === 'none') {
         jQuery('.skill').fadeIn();
         jQuery('.skillPlaceholder').remove();
+
+        jQuery('#php').ClassyLoader({
+            percentage:85,
+            showText:false,
+            roundedLine:true,
+            lineColor:'rgba(86, 160, 155, 1)',
+            fontColor:'rgba(86, 160, 155, 1)'
+        }).draw();
+
+        jQuery('#wireframe').ClassyLoader({
+            percentage:85,
+            showText:false,
+            roundedLine:true,
+            lineColor:'rgba(86, 160, 155, 1)',
+            fontColor:'rgba(86, 160, 155, 1)'
+        }).draw();
+
+        jQuery('#prototype').ClassyLoader({
+            percentage:85,
+            showText:false,
+            roundedLine:true,
+            lineColor:'rgba(86, 160, 155, 1)',
+            fontColor:'rgba(86, 160, 155, 1)'
+        }).draw();
+
+        jQuery('#persona').ClassyLoader({
+            percentage:85,
+            showText:false,
+            roundedLine:true,
+            lineColor:'rgba(86, 160, 155, 1)',
+            fontColor:'rgba(86, 160, 155, 1)'
+        }).draw();
+
+        jQuery('#journey').ClassyLoader({
+            percentage:85,
+            showText:false,
+            roundedLine:true,
+            lineColor:'rgba(86, 160, 155, 1)',
+            fontColor:'rgba(86, 160, 155, 1)'
+        }).draw();
+
         jQuery('#photoshop').ClassyLoader({
             percentage:90,
             showText:false,
@@ -160,13 +201,13 @@ jQuery(window).scroll(function () {
             fontColor:'rgba(198, 159, 54, 1)'
         }).draw();
 
-        jQuery('#pixate').ClassyLoader({
-            percentage:75,
-            showText:false,
-            roundedLine:true,
-            lineColor:'rgba(0, 129, 178, 1)',
-            fontColor:'rgba(0, 129, 178, 1)'
-        }).draw();
+        // jQuery('#pixate').ClassyLoader({
+        //     percentage:75,
+        //     showText:false,
+        //     roundedLine:true,
+        //     lineColor:'rgba(0, 129, 178, 1)',
+        //     fontColor:'rgba(0, 129, 178, 1)'
+        // }).draw();
 
         jQuery('#axure').ClassyLoader({
             percentage:75,
@@ -192,7 +233,7 @@ jQuery(window).scroll(function () {
             fontColor:'rgba(0, 0, 0, 1)'
         }).draw();
 
-        jQuery('#webstorm').ClassyLoader({
+        jQuery('#phpstorm').ClassyLoader({
             percentage:75,
             showText:false,
             roundedLine:true,
@@ -240,7 +281,7 @@ jQuery(window).scroll(function () {
             fontColor:'rgba(86, 160, 155, 1)'
         }).draw();
 
-	jQuery('#sql').ClassyLoader({
+	    jQuery('#sql').ClassyLoader({
             percentage:50,
             showText:false,
             roundedLine:true,

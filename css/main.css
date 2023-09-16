@@ -181,8 +181,19 @@ a {color:#009ABB;text-decoration: none;border-bottom: dotted 1px #009ABB}
     justify-content: space-around;
     max-width: 1200px;
 }
-.skill {width: 200px;height: 200px;overflow: hidden;display: none}
-.skill p {text-align: center;margin: 79px 0 -115px 0}
+.skill {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: none
+}
+.skill p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 79px 0 -115px 0
+}
 .skillPlaceholder {width:200px;height: 200px}
 .loader {width: 100%;height: 100%;}
 /*經歷*/
